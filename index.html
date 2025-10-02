@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off Label Scaffolds - Production-Ready Project Templates</title>
+    <meta name="description" content="47 production-ready scaffolds for every major tech stack. Built by Augustus Rivers because starting from scratch every time sucks.">
+    <meta name="author" content="Augustus Rivers">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.85;
+            font-style: italic;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .section-desc {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .category-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .category-desc {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .category-count {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Scaffolds List */
+        .scaffolds-section {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .scaffold-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .scaffold-card {
+            background: #fafafa;
+            border: 2px solid #e5e5e5;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .scaffold-card:hover {
+            border-color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.1);
+        }
+
+        .scaffold-name {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .scaffold-desc {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .scaffold-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .tag.priority {
+            background: #f43f5e;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 0 40px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #999;
+            text-decoration: none;
+            line-height: 2;
+        }
+
+        .footer-section a:hover {
+            color: #667eea;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #333;
+            color: #666;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            .stats {
+                gap: 20px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Off Label Scaffolds</h1>
+            <p>47 production-ready project templates for every major tech stack</p>
+            <p class="subtitle">Built by Augustus Rivers because starting from scratch every time sucks.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">47</span>
+                    <span class="stat-label">Scaffolds</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Categories</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Production Ready</span>
+                </div>
+            </div>
+
+            <a href="https://github.com/offlabel-scaffolds" class="cta-button">View on GitHub</a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div style="font-weight: 600;">Off Label Scaffolds</div>
+            <ul class="nav-links">
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#scaffolds">All Scaffolds</a></li>
+                <li><a href="https://offlabel.design" target="_blank">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            <p class="section-desc">
+                Every scaffold includes production-ready configuration, documentation that doesn't suck, 
+                and proper error handling. Not tutorial code—real shit you can deploy.
+            </p>
+
+            <div class="category-grid">
+                <div class="category-card" onclick="filterScaffolds('saas')">
+                    <div class="category-icon">🚀</div>
+                    <h3 class="category-name">SaaS Platforms</h3>
+                    <p class="category-desc">Full-stack SaaS with auth, billing, and databases</p>
+                    <span class="category-count">5 scaffolds</span>
+                </div>
+
+                <div class="category-card" onclick="filterScaffolds('ai')">
+                    <div class="category-icon">🤖</div>
+                    <h3 class="category-name">AI & Machine Learning</h3>
+                    <p class="category-desc">LLMs, RAG, computer vision, training pipelines</p>
+                    <span class="category-count">9 scaffolds</span>
+                </div>
+
+                <div class="category-card" onclick="filterScaffolds('mobile')">
+                    <div class="category-icon">📱</div>
+                    <h3 class="category-name">Mobile Apps</h3>
+                    <p class="category-desc">React Native, Flutter, cross-platform</p>
+                    <span class="category-count">4 scaffolds</span>
+                </div>
+
+                <div class="category-card" onclick="filterScaffolds('web3')">
+                    <div class="category-icon">🌐</div>
+                    <h3 class="category-name">Web3 & Blockchain</h3>
+                    <p class="category-desc">Solana, NFT, DApps, smart contracts</p>
+                    <span class="category-count">4 scaffolds</span>
+                </div>
+
+                <div class="category-card" onclick="filterScaffolds('backend')">
+                    <div class="category-icon">⚙️</div>
+                    <h3 class="category-name">Backend APIs</h3>
+                    <p class="category-desc">FastAPI, Node.js, Rust, Go microservices</p>
+                    <span class="category-count">8 scaffolds</span>
+                </div>
+
+                <div class="category-card" onclick="filterScaffolds('devops')">
+                    <div class="category-icon">🛠️</div>
+                    <h3 class="category-name">DevOps & Infrastructure</h3>
+                    <p class="category-desc">Docker, Kubernetes, CI/CD, monitoring</p>
+                    <span class="category-count">6 scaffolds</span>
+                </div>
+
+                <div class="category-card" onclick="filterScaffolds('healthcare')">
+                    <div class="category-icon">🏥</div>
+                    <h3 class="category-name">Healthcare & Fintech</h3>
+                    <p class="category-desc">HIPAA-compliant, FHIR, banking, payments</p>
+                    <span class="category-count">4 scaffolds</span>
+                </div>
+
+                <div class="category-card" onclick="filterScaffolds('frontend')">
+                    <div class="category-icon">🎨</div>
+                    <h3 class="category-name">Frontend & UI</h3>
+                    <p class="category-desc">Design systems, component libraries, docs</p>
+                    <span class="category-count">3 scaffolds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="scaffolds-section" id="scaffolds">
+        <div class="container">
+            <h2 class="section-title">All 47 Scaffolds</h2>
+            <p class="section-desc">
+                Click any scaffold to view the code on GitHub. Every one is MIT licensed—do whatever you want with it.
+            </p>
+
+            <div class="scaffold-grid" id="scaffold-list">
+                <!-- Scaffolds will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Off Label Scaffolds</h3>
+                    <p>Production-ready project templates for developers who want to ship fast without cutting corners.</p>
+                    <p>Built with ❤️ (and way too much coffee)</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="https://github.com/offlabel-scaffolds">GitHub Organization</a></p>
+                    <p><a href="https://offlabel.design">Off Label Design</a></p>
+                    <p><a href="mailto:hello@offlabel.design">Email Us</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Built By</h3>
+                    <p><strong>Augustus Rivers</strong></p>
+                    <p>Email: hello@offlabel.design</p>
+                    <p>Website: <a href="https://offlabel.design">offlabel.design</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>License</h3>
+                    <p>All scaffolds are MIT licensed. Use them for whatever you want—personal projects, commercial products, client work, whatever.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Augustus Rivers - Off Label Design. MIT License.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">
+                    Because life's too short to rebuild authentication for the 47th time.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scaffold data
+        const scaffolds = [
+            { name: 'scaffold-nextjs-saas', desc: 'Next.js 15 SaaS with Stripe & auth', tags: ['nextjs', 'saas', 'priority'], category: 'saas' },
+            { name: 'scaffold-fastapi-backend', desc: 'FastAPI with PostgreSQL & auth', tags: ['python', 'api', 'priority'], category: 'backend' },
+            { name: 'scaffold-react-native-consumer', desc: 'Expo mobile app with offline-first', tags: ['mobile', 'react-native', 'priority'], category: 'mobile' },
+            { name: 'scaffold-llm-finetuning', desc: 'LLM fine-tuning pipeline', tags: ['ai', 'ml', 'python'], category: 'ai' },
+            { name: 'scaffold-rag-app', desc: 'RAG application with embeddings', tags: ['ai', 'llm', 'python'], category: 'ai' },
+            { name: 'scaffold-computer-vision', desc: 'CV model serving API', tags: ['ai', 'python', 'ml'], category: 'ai' },
+            { name: 'scaffold-multimodal-ai', desc: 'Multimodal AI processing', tags: ['ai', 'python'], category: 'ai' },
+            { name: 'scaffold-vector-db-app', desc: 'Vector database application', tags: ['ai', 'database'], category: 'ai' },
+            { name: 'scaffold-ai-agent-runtime', desc: 'AI agent orchestration', tags: ['ai', 'python'], category: 'ai' },
+            { name: 'scaffold-multiagent-orchestration', desc: 'Multi-agent system', tags: ['ai', 'python'], category: 'ai' },
+            { name: 'scaffold-ml-training-pipeline', desc: 'ML model training pipeline', tags: ['ml', 'python'], category: 'ai' },
+            { name: 'scaffold-solana-app', desc: 'Solana dApp scaffold', tags: ['web3', 'solana', 'rust'], category: 'web3' },
+            { name: 'scaffold-nft-marketplace', desc: 'NFT marketplace platform', tags: ['web3', 'nft'], category: 'web3' },
+            { name: 'scaffold-web3-dapp', desc: 'Web3 decentralized app', tags: ['web3'], category: 'web3' },
+            { name: 'scaffold-banking-saas', desc: 'Banking platform core', tags: ['fintech', 'saas'], category: 'healthcare' },
+            { name: 'scaffold-fintech-core', desc: 'Fintech application core', tags: ['fintech'], category: 'healthcare' },
+            { name: 'scaffold-healthcare-fhir-api', desc: 'FHIR-compliant healthcare API', tags: ['healthcare', 'api'], category: 'healthcare' },
+            { name: 'scaffold-telemedicine-app', desc: 'Telemedicine platform', tags: ['healthcare', 'saas'], category: 'healthcare' },
+            { name: 'scaffold-bun-backend', desc: 'High-performance Bun API', tags: ['node', 'api'], category: 'backend' },
+            { name: 'scaffold-node-api', desc: 'Node.js REST API', tags: ['node', 'api'], category: 'backend' },
+            { name: 'scaffold-go-microservice', desc: 'Go microservice', tags: ['go', 'api'], category: 'backend' },
+            { name: 'scaffold-rust-service', desc: 'Rust backend service', tags: ['rust', 'api'], category: 'backend' },
+            { name: 'scaffold-api-gateway', desc: 'API gateway with rate limiting', tags: ['api', 'infrastructure'], category: 'backend' },
+            { name: 'scaffold-auth-oidc', desc: 'OpenID Connect auth server', tags: ['auth', 'api'], category: 'backend' },
+            { name: 'scaffold-docker-compose-fullstack', desc: 'Full-stack Docker setup', tags: ['devops', 'docker', 'priority'], category: 'devops' },
+            { name: 'scaffold-k8s-helm', desc: 'Kubernetes Helm charts', tags: ['devops', 'kubernetes'], category: 'devops' },
+            { name: 'scaffold-ci-cd-pipeline', desc: 'Complete CI/CD pipeline', tags: ['devops', 'ci-cd'], category: 'devops' },
+            { name: 'scaffold-observability', desc: 'Monitoring & observability', tags: ['devops', 'monitoring'], category: 'devops' },
+            { name: 'scaffold-elt-pipeline', desc: 'Data ELT pipeline', tags: ['data', 'pipeline'], category: 'devops' },
+            { name: 'scaffold-multi-region-db', desc: 'Multi-region database setup', tags: ['database', 'infrastructure'], category: 'devops' },
+            { name: 'scaffold-nextjs-ecommerce', desc: 'Next.js ecommerce platform', tags: ['nextjs', 'ecommerce'], category: 'saas' },
+            { name: 'scaffold-remix-saas', desc: 'Remix SaaS starter', tags: ['remix', 'saas'], category: 'saas' },
+            { name: 'scaffold-crossplatform-shared', desc: 'T3 stack monorepo', tags: ['nextjs', 'monorepo', 'priority'], category: 'saas' },
+            { name: 'scaffold-flutter-consumer', desc: 'Flutter mobile app', tags: ['mobile', 'flutter'], category: 'mobile' },
+            { name: 'scaffold-design-system', desc: 'Design system & components', tags: ['ui', 'design'], category: 'frontend' },
+            { name: 'scaffold-astro-docs', desc: 'Astro documentation site', tags: ['docs', 'astro'], category: 'frontend' },
+            { name: 'scaffold-svelte-kit-app', desc: 'SvelteKit application', tags: ['svelte', 'frontend'], category: 'frontend' },
+            { name: 'scaffold-edge-function', desc: 'Edge function (Cloudflare/Vercel)', tags: ['edge', 'serverless'], category: 'backend' },
+            { name: 'scaffold-vercel-edge', desc: 'Vercel Edge Functions', tags: ['edge', 'vercel'], category: 'backend' },
+            { name: 'scaffold-realtime-chat', desc: 'WebSocket real-time chat', tags: ['realtime', 'websocket'], category: 'backend' },
+            { name: 'scaffold-billing-stripe', desc: 'Stripe billing integration', tags: ['stripe', 'payments'], category: 'saas' },
+            { name: 'scaffold-feature-flags', desc: 'Feature flags system', tags: ['devops', 'flags'], category: 'devops' },
+            { name: 'scaffold-testing-framework', desc: 'E2E testing framework', tags: ['testing', 'qa'], category: 'devops' },
+            { name: 'scaffold-gdpr-compliant', desc: 'GDPR compliance toolkit', tags: ['compliance', 'legal'], category: 'healthcare' },
+            { name: 'scaffold-accessibility-first', desc: 'Accessibility-first UI', tags: ['a11y', 'frontend'], category: 'frontend' },
+            { name: 'scaffold-monorepo', desc: 'Monorepo setup (Turborepo)', tags: ['monorepo', 'infrastructure'], category: 'devops' },
+            { name: 'scaffold-server-components', desc: 'React Server Components', tags: ['react', 'nextjs'], category: 'frontend' },
+        ];
+
+        // Render scaffolds
+        function renderScaffolds(filter = null) {
+            const container = document.getElementById('scaffold-list');
+            const filtered = filter ? scaffolds.filter(s => s.category === filter) : scaffolds;
+            
+            container.innerHTML = filtered.map(scaffold => `
+                <a href="https://github.com/offlabel-scaffolds/${scaffold.name}" 
+                   class="scaffold-card" 
+                   target="_blank">
+                    <div class="scaffold-name">${scaffold.name}</div>
+                    <div class="scaffold-desc">${scaffold.desc}</div>
+                    <div class="scaffold-tags">
+                        ${scaffold.tags.map(tag => `
+                            <span class="tag ${tag === 'priority' ? 'priority' : ''}">${tag}</span>
+                        `).join('')}
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        function filterScaffolds(category) {
+            renderScaffolds(category);
+            document.getElementById('scaffolds').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initial render
+        renderScaffolds();
+    </script>
+</body>
+</html>
