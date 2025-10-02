@@ -6,6 +6,9 @@
     <title>Offlabel Scaffolds - Production-Ready Project Templates</title>
     <meta name="description" content="47 production-ready scaffolds for every major tech stack. Built by Augustus Rivers because starting from scratch every time sucks.">
     <meta name="author" content="Augustus Rivers">
+    <meta property="og:title" content="Offlabel Scaffolds - 47 Production-Ready Templates">
+    <meta property="og:description" content="Ship faster with production-ready scaffolds for Next.js, AI/ML, Web3, Mobile, and more.">
+    <meta property="og:url" content="https://offlabel-scaffolds.github.io">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -96,10 +99,24 @@
             padding: 15px 20px;
         }
 
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+
+        .nav-logo:hover {
+            color: #667eea;
+        }
+
         .nav-links {
             display: flex;
             gap: 30px;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -153,7 +170,7 @@
 
         .category-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
         }
 
         .category-icon {
@@ -318,7 +335,7 @@
         <div class="container">
             <h1>Offlabel Scaffolds</h1>
             <p>47 production-ready project templates for every major tech stack</p>
-            <p class="subtitle">Built by Augustus Rivers because starting from scratch every time sucks.</p>
+            <p class="subtitle">Because life's too short to rebuild authentication for the 47th time.</p>
             
             <div class="stats">
                 <div class="stat">
@@ -339,13 +356,16 @@
         </div>
     </header>
 
-    <nav>
+        <nav>
         <div class="container">
-            <div style="font-weight: 600;">Offlabel Scaffolds</div>
+            <a href="/" class="nav-logo">
+                <div class="logo">Offlabel Scaffolds</div>
+            </a>
             <ul class="nav-links">
                 <li><a href="#categories">Categories</a></li>
-                <li><a href="#scaffolds">All Scaffolds</a></li>
-                <li><a href="https://offlabel.design" target="_blank">About</a></li>
+                <li><a href="#scaffolds">Scaffolds</a></li>
+                <li><a href="https://github.com/offlabel-scaffolds" target="_blank">GitHub</a></li>
+                <li><a href="https://offlabel.design" target="_blank" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 8px 20px; border-radius: 20px; transition: all 0.3s ease;">Offlabel Design ✨</a></li>
             </ul>
         </div>
     </nav>
@@ -444,6 +464,7 @@
                     <h3>Quick Links</h3>
                     <p><a href="https://github.com/offlabel-scaffolds">GitHub Organization</a></p>
                     <p><a href="https://offlabel.design">Offlabel Design</a></p>
+                    <p><a href="https://convert.offlabel.design" target="_blank">Format Converter Tool</a></p>
                     <p><a href="mailto:hello@offlabel.design">Email Us</a></p>
                 </div>
 
@@ -461,9 +482,9 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Augustus Rivers - Offlabel Design. MIT License.</p>
+                <p>&copy; 2025 Augustus Rivers - Offlabel Design. All scaffolds MIT licensed.</p>
                 <p style="margin-top: 10px; font-size: 0.9rem;">
-                    Because life's too short to rebuild authentication for the 47th time.
+                    Need a <a href="https://convert.offlabel.design" target="_blank" style="color: #667eea; text-decoration: underline;">format converter</a>? We built that too.
                 </p>
             </div>
         </div>
