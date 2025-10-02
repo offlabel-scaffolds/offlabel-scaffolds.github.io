@@ -1,0 +1,11 @@
+# robots.txt for Offlabel Scaffolds
+# Allow all search engines to crawl everything
+
+User-agent: *
+Allow: /
+
+# Sitemap location (GitHub Pages auto-generates)
+Sitemap: https://offlabel-scaffolds.github.io/sitemap.xml
+
+# Crawl-delay for polite bots (optional)
+Crawl-delay: 1
