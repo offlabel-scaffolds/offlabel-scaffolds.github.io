@@ -1,4 +1,4 @@
-# Off Label Scaffolds
+# Offlabel Scaffolds
 
 **Production-ready project templates for developers who want to ship fast.**
 
