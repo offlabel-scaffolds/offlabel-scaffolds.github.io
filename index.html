@@ -33,14 +33,13 @@
 
         /* Glassmorphism Navigation */
         nav {
-            background: rgba(255, 255, 255, 0.7);
+            background: transparent;
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
         nav .container {
@@ -107,7 +106,7 @@
 
         /* Hero Section with Curves */
         .hero {
-            padding: 100px 0 80px;
+            padding: 80px 0 40px;
             text-align: center;
         }
 
@@ -130,10 +129,10 @@
         /* Curved Search Bar */
         .search-filter {
             background: white;
-            padding: 48px;
+            padding: 40px;
             border-radius: 32px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .search-bar {
@@ -197,15 +196,15 @@
         /* Curved Section Cards */
         .scaffolds-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-            gap: 32px;
-            margin-bottom: 100px;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
         }
 
         .scaffold-card {
             background: white;
-            border-radius: 24px;
-            padding: 32px;
+            border-radius: 20px;
+            padding: 24px;
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
@@ -241,7 +240,7 @@
         }
 
         .scaffold-card h3 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             color: #171717;
             margin-bottom: 8px;
@@ -249,9 +248,9 @@
 
         .scaffold-card p {
             color: #737373;
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 16px;
         }
 
         .priority-badge {
@@ -303,12 +302,13 @@
         }
 
         .category-tag {
-            padding: 4px 10px;
-            background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
-            border-radius: 10px;
+            padding: 5px 12px;
+            background: #171717;
+            border-radius: 12px;
             font-size: 12px;
-            color: #525252;
-            font-weight: 500;
+            color: white;
+            font-weight: 600;
+            text-transform: capitalize;
         }
 
         /* Circular Arrow Button */
@@ -348,8 +348,9 @@
         .stats-section {
             background: white;
             border-radius: 32px;
-            padding: 60px 48px;
-            margin-bottom: 80px;
+            padding: 50px 40px;
+            margin-bottom: 60px;
+            margin-top: 60px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
         }
 
@@ -498,8 +499,6 @@
                 <span>Scaffolds</span>
             </div>
             <ul class="nav-links">
-                <li><a href="https://convert.offlabel.design">Converter</a></li>
-                <li><a href="https://offlabel.design">Offlabel Design</a></li>
                 <li><a href="mailto:hello@offlabel.design" class="contact-btn">Contact</a></li>
             </ul>
         </div>
@@ -540,6 +539,11 @@
             </div>
         </div>
 
+        <!-- Scaffolds Grid -->
+        <div class="scaffolds-grid" id="scaffoldsGrid">
+            <!-- Scaffolds will be injected here by JavaScript -->
+        </div>
+
         <!-- Stats Section -->
         <div class="stats-section">
             <div class="stats-grid">
@@ -560,11 +564,6 @@
                     <p>Open Source</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Scaffolds Grid -->
-        <div class="scaffolds-grid" id="scaffoldsGrid">
-            <!-- Scaffolds will be injected here by JavaScript -->
         </div>
     </section>
 
