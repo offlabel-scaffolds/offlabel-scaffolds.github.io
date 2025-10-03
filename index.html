@@ -537,6 +537,17 @@
                 <button class="filter-btn" data-priority="medium">Medium</button>
                 <button class="filter-btn" data-priority="low">Low</button>
             </div>
+            <div class="filters" style="margin-top: 12px;">
+                <label>Use Cases:</label>
+                <button class="filter-btn active" data-usecase="all">All</button>
+                <button class="filter-btn" data-usecase="saas">SaaS/Startups</button>
+                <button class="filter-btn" data-usecase="ai-ml">AI/ML Projects</button>
+                <button class="filter-btn" data-usecase="web3">Web3/Crypto</button>
+                <button class="filter-btn" data-usecase="enterprise">Enterprise</button>
+                <button class="filter-btn" data-usecase="api">API Development</button>
+                <button class="filter-btn" data-usecase="realtime">Real-time</button>
+                <button class="filter-btn" data-usecase="content">Content/Media</button>
+            </div>
         </div>
 
         <!-- Scaffolds Grid -->
@@ -605,6 +616,7 @@
                 tech: ["Next.js 14", "TypeScript", "Tailwind", "Prisma", "Stripe"],
                 categories: ["frontend", "fullstack"],
                 priority: "high",
+                usecases: ["saas", "enterprise"],
                 repo: "nextjs-saas-starter"
             },
             {
@@ -613,6 +625,7 @@
                 tech: ["React Native", "Expo", "TypeScript", "NativeWind"],
                 categories: ["mobile"],
                 priority: "high",
+                usecases: ["saas", "enterprise"],
                 repo: "react-native-expo-starter"
             },
             {
@@ -621,6 +634,7 @@
                 tech: ["FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT"],
                 categories: ["backend"],
                 priority: "high",
+                usecases: ["api", "saas", "enterprise"],
                 repo: "fastapi-backend"
             },
             {
@@ -629,6 +643,7 @@
                 tech: ["Next.js", "OpenAI", "Vercel AI SDK", "TypeScript"],
                 categories: ["ai-ml", "fullstack"],
                 priority: "high",
+                usecases: ["ai-ml", "realtime"],
                 repo: "nextjs-ai-chatbot"
             },
             {
@@ -637,6 +652,7 @@
                 tech: ["Next.js", "ethers.js", "RainbowKit", "Wagmi"],
                 categories: ["blockchain", "frontend"],
                 priority: "medium",
+                usecases: ["web3"],
                 repo: "web3-dapp-starter"
             },
             {
@@ -645,6 +661,7 @@
                 tech: ["Python", "PyTorch", "MLflow", "FastAPI"],
                 categories: ["ai-ml", "data"],
                 priority: "high",
+                usecases: ["ai-ml", "enterprise"],
                 repo: "python-ml-pipeline"
             },
             {
@@ -1003,9 +1020,46 @@
             `).join('');
         }
 
+        // Add default usecases to scaffolds that don't have them
+        scaffolds.forEach(scaffold => {
+            if (!scaffold.usecases) {
+                scaffold.usecases = [];
+                
+                // Auto-assign based on categories
+                if (scaffold.categories.includes('ai-ml')) scaffold.usecases.push('ai-ml');
+                if (scaffold.categories.includes('blockchain')) scaffold.usecases.push('web3');
+                if (scaffold.categories.includes('backend') || scaffold.categories.includes('fullstack')) {
+                    if (scaffold.name.includes('api') || scaffold.name.includes('graphql') || scaffold.name.includes('grpc')) {
+                        scaffold.usecases.push('api');
+                    }
+                    if (scaffold.name.includes('saas') || scaffold.name.includes('stripe') || scaffold.name.includes('auth') || scaffold.name.includes('multi-tenancy')) {
+                        scaffold.usecases.push('saas');
+                    }
+                }
+                if (scaffold.name.includes('websocket') || scaffold.name.includes('realtime') || scaffold.name.includes('notification')) {
+                    scaffold.usecases.push('realtime');
+                }
+                if (scaffold.name.includes('dashboard') || scaffold.name.includes('admin') || scaffold.name.includes('enterprise') || scaffold.name.includes('monitoring') || scaffold.name.includes('kubernetes') || scaffold.name.includes('terraform')) {
+                    scaffold.usecases.push('enterprise');
+                }
+                if (scaffold.name.includes('blog') || scaffold.name.includes('video') || scaffold.name.includes('image') || scaffold.name.includes('file') || scaffold.name.includes('pdf')) {
+                    scaffold.usecases.push('content');
+                }
+                
+                // Default fallback
+                if (scaffold.usecases.length === 0) {
+                    if (scaffold.categories.includes('fullstack')) scaffold.usecases.push('saas');
+                    else if (scaffold.categories.includes('backend')) scaffold.usecases.push('api', 'enterprise');
+                    else if (scaffold.categories.includes('devops')) scaffold.usecases.push('enterprise');
+                    else scaffold.usecases.push('saas');
+                }
+            }
+        });
+
         // Filter functionality
         let currentCategory = 'all';
         let currentPriority = 'all';
+        let currentUsecase = 'all';
         let currentSearch = '';
 
         function filterScaffolds() {
@@ -1017,6 +1071,10 @@
 
             if (currentPriority !== 'all') {
                 filtered = filtered.filter(s => s.priority === currentPriority);
+            }
+
+            if (currentUsecase !== 'all') {
+                filtered = filtered.filter(s => s.usecases && s.usecases.includes(currentUsecase));
             }
 
             if (currentSearch) {
@@ -1047,6 +1105,16 @@
                 document.querySelectorAll('[data-priority]').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentPriority = btn.dataset.priority;
+                filterScaffolds();
+            });
+        });
+
+        // Use case filter
+        document.querySelectorAll('[data-usecase]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('[data-usecase]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentUsecase = btn.dataset.usecase;
                 filterScaffolds();
             });
         });
