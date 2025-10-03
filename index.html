@@ -17,6 +17,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
@@ -56,6 +60,12 @@
             font-weight: 600;
             font-size: 16px;
             color: #171717;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .logo-container:hover {
+            opacity: 0.7;
         }
 
         .logo-o {
@@ -106,24 +116,22 @@
 
         /* Hero Section with Curves */
         .hero {
-            padding: 80px 0 40px;
+            padding: 40px 0 30px;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 56px;
+            font-size: 42px;
             font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             color: #171717;
-        }
-
-        .hero p {
-            font-size: 20px;
+        }        .hero p {
+            font-size: 18px;
             color: #525252;
             max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
+            margin: 0 auto 30px;
+            line-height: 1.5;
         }
 
         /* Curved Search Bar */
@@ -494,12 +502,13 @@
     <!-- Glassmorphism Navigation -->
     <nav>
         <div class="container">
-            <div class="logo-container">
-                <div class="logo-o">O</div>
-                <span>Scaffolds</span>
-            </div>
+                    <a href="#" class="logo-container" style="text-decoration: none; color: inherit;">
+            <div class="logo-o">O</div>
+            <span>Offlabel Scaffolds</span>
+        </a>
             <ul class="nav-links">
-                <li><a href="mailto:hello@offlabel.design" class="contact-btn">Contact</a></li>
+                <li><a href="https://github.com/offlabel-scaffolds">GitHub</a></li>
+                <li><a href="https://offlabel.design/contact" class="contact-btn">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -507,8 +516,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Production-Ready<br>Project Scaffolds</h1>
-            <p>59 comprehensive scaffolds including 12 advanced AI/ML templates for agents, RAG, multi-agent systems, and more. Built by Augustus Rivers at Offlabel Design.</p>
+            <h1>Production-Ready Project Scaffolds</h1>
+            <p>Stop rebuilding the same boilerplate. 68 battle-tested templates for startups, AI/ML, fintech, healthcare, and e-commerce.</p>
         </div>
     </section>
 
@@ -530,37 +539,17 @@
                 <button class="filter-btn" data-category="devops">DevOps</button>
                 <button class="filter-btn" data-category="data">Data</button>
             </div>
-            <div class="filters" style="margin-top: 12px;">
-                <label>Priority:</label>
-                <button class="filter-btn active" data-priority="all">All</button>
-                <button class="filter-btn" data-priority="high">High</button>
-                <button class="filter-btn" data-priority="medium">Medium</button>
-                <button class="filter-btn" data-priority="low">Low</button>
-            </div>
-            <div class="filters" style="margin-top: 12px;">
-                <label>Use Cases:</label>
+            <div class="filters" id="filters" style="margin-top: 12px;">
+                <label>Industries:</label>
                 <button class="filter-btn active" data-usecase="all">All</button>
                 <button class="filter-btn" data-usecase="saas">SaaS/Startups</button>
-                <button class="filter-btn" data-usecase="ai-ml">AI/ML Projects</button>
+                <button class="filter-btn" data-usecase="ai-ml">AI/Agents</button>
+                <button class="filter-btn" data-usecase="fintech">Fintech/Banking</button>
+                <button class="filter-btn" data-usecase="healthcare">Healthcare</button>
+                <button class="filter-btn" data-usecase="ecommerce">E-commerce</button>
                 <button class="filter-btn" data-usecase="web3">Web3/Crypto</button>
                 <button class="filter-btn" data-usecase="enterprise">Enterprise</button>
-                <button class="filter-btn" data-usecase="api">API Development</button>
                 <button class="filter-btn" data-usecase="realtime">Real-time</button>
-                <button class="filter-btn" data-usecase="content">Content/Media</button>
-            </div>
-            <div class="filters" style="margin-top: 12px;">
-                <label>Complexity:</label>
-                <button class="filter-btn active" data-complexity="all">All</button>
-                <button class="filter-btn" data-complexity="beginner">Beginner</button>
-                <button class="filter-btn" data-complexity="intermediate">Intermediate</button>
-                <button class="filter-btn" data-complexity="advanced">Advanced</button>
-            </div>
-            <div class="filters" style="margin-top: 12px;">
-                <label>Maturity:</label>
-                <button class="filter-btn active" data-maturity="all">All</button>
-                <button class="filter-btn" data-maturity="stable">Stable</button>
-                <button class="filter-btn" data-maturity="beta">Beta</button>
-                <button class="filter-btn" data-maturity="alpha">Alpha</button>
             </div>
         </div>
 
@@ -573,16 +562,16 @@
         <div class="stats-section">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <h3>59</h3>
+                    <h3>68</h3>
                     <p>Total Scaffolds</p>
                 </div>
                 <div class="stat-item">
                     <h3>12</h3>
-                    <p>AI/ML Scaffolds</p>
+                    <p>AI/ML Templates</p>
                 </div>
                 <div class="stat-item">
-                    <h3>100%</h3>
-                    <p>Production Ready</p>
+                    <h3>9</h3>
+                    <p>Industry-Specific</p>
                 </div>
                 <div class="stat-item">
                     <h3>MIT</h3>
@@ -617,7 +606,7 @@
         </div>
         <div class="footer-bottom">
             <p>© 2025 Offlabel Design. All rights reserved.</p>
-            <p>Built by Augustus Rivers</p>
+            <p>Built with care and coffee ☕</p>
         </div>
     </footer>
 
@@ -1187,6 +1176,151 @@
                 categories: ["backend"],
                 priority: "medium",
                 repo: "two-factor-auth"
+            },
+            // 🏥💰🛒 INDUSTRY-SPECIFIC SCAFFOLDS (9 Specialized Templates)
+            {
+                name: "banking-core-platform",
+                description: "Core banking system with account management, transactions, and compliance",
+                tech: ["Node.js", "PostgreSQL", "Redis", "Kafka", "Docker"],
+                categories: ["backend"],
+                priority: "high",
+                usecases: ["fintech", "enterprise"],
+                maturity: "stable",
+                complexity: "advanced",
+                features: ["PCI-DSS", "ACH/Wire", "Ledger", "KYC/AML", "Audit Trail", "Multi-tenant"],
+                hasDemo: false,
+                hasCLI: false,
+                securityFeatures: ["PCI-DSS", "Encryption", "Compliance"],
+                lastUpdated: "2025-10-03",
+                repo: "banking-core-platform"
+            },
+            {
+                name: "payment-gateway-integration",
+                description: "Multi-provider payment gateway with Stripe, PayPal, and crypto support",
+                tech: ["FastAPI", "Stripe", "PostgreSQL", "Redis", "Python"],
+                categories: ["backend"],
+                priority: "high",
+                usecases: ["fintech", "ecommerce", "saas"],
+                maturity: "stable",
+                complexity: "intermediate",
+                features: ["Multi-currency", "Webhooks", "Refunds", "Subscriptions", "Fraud Detection"],
+                hasDemo: true,
+                hasCLI: false,
+                securityFeatures: ["PCI-DSS", "Encryption", "Compliance"],
+                lastUpdated: "2025-10-03",
+                repo: "payment-gateway-integration"
+            },
+            {
+                name: "fintech-kyc-verification",
+                description: "Identity verification with document scanning, liveness detection, and AML checks",
+                tech: ["Python", "FastAPI", "OpenCV", "PostgreSQL", "Redis"],
+                categories: ["backend", "ai-ml"],
+                priority: "high",
+                usecases: ["fintech", "enterprise"],
+                maturity: "stable",
+                complexity: "advanced",
+                features: ["Document OCR", "Face Match", "AML Screening", "Risk Scoring", "Compliance Reports"],
+                hasDemo: false,
+                hasCLI: false,
+                securityFeatures: ["PCI-DSS", "Encryption", "Compliance"],
+                lastUpdated: "2025-10-03",
+                repo: "fintech-kyc-verification"
+            },
+            {
+                name: "fhir-compliant-api",
+                description: "HL7 FHIR-compliant healthcare API with patient records and interoperability",
+                tech: ["Node.js", "FHIR", "PostgreSQL", "HL7", "Docker"],
+                categories: ["backend"],
+                priority: "high",
+                usecases: ["healthcare", "enterprise"],
+                maturity: "stable",
+                complexity: "advanced",
+                features: ["FHIR R4", "HIPAA", "Audit Logs", "Patient Portal", "EHR Integration", "HL7 v2"],
+                hasDemo: false,
+                hasCLI: false,
+                securityFeatures: ["HIPAA", "Encryption", "Audit Logs"],
+                lastUpdated: "2025-10-03",
+                repo: "fhir-compliant-api"
+            },
+            {
+                name: "telemedicine-platform",
+                description: "End-to-end telemedicine platform with video calls, prescriptions, and appointments",
+                tech: ["Next.js", "WebRTC", "Node.js", "PostgreSQL", "Redis"],
+                categories: ["fullstack"],
+                priority: "high",
+                usecases: ["healthcare", "saas"],
+                maturity: "stable",
+                complexity: "advanced",
+                features: ["Video Calls", "E-Prescriptions", "Scheduling", "HIPAA", "Chat", "Payment"],
+                hasDemo: true,
+                hasCLI: false,
+                securityFeatures: ["HIPAA", "Encryption", "Audit Logs"],
+                lastUpdated: "2025-10-03",
+                repo: "telemedicine-platform"
+            },
+            {
+                name: "medical-imaging-ai",
+                description: "AI-powered medical imaging analysis with DICOM support and ML models",
+                tech: ["Python", "PyTorch", "FastAPI", "DICOM", "PostgreSQL"],
+                categories: ["ai-ml", "backend"],
+                priority: "high",
+                usecases: ["healthcare", "ai-ml"],
+                maturity: "stable",
+                complexity: "advanced",
+                features: ["DICOM Processing", "AI Detection", "Annotation", "PACS Integration", "Reporting"],
+                hasDemo: false,
+                hasCLI: true,
+                securityFeatures: ["HIPAA", "Encryption", "Audit Logs"],
+                lastUpdated: "2025-10-03",
+                repo: "medical-imaging-ai"
+            },
+            {
+                name: "ecommerce-marketplace",
+                description: "Complete marketplace platform with vendor management, payments, and logistics",
+                tech: ["Next.js", "Node.js", "PostgreSQL", "Redis", "Stripe"],
+                categories: ["fullstack"],
+                priority: "high",
+                usecases: ["ecommerce", "saas"],
+                maturity: "stable",
+                complexity: "advanced",
+                features: ["Multi-vendor", "Inventory", "Orders", "Shipping", "Reviews", "Analytics"],
+                hasDemo: true,
+                hasCLI: false,
+                securityFeatures: ["Authentication", "Rate Limiting", "CORS"],
+                lastUpdated: "2025-10-03",
+                repo: "ecommerce-marketplace"
+            },
+            {
+                name: "headless-commerce-api",
+                description: "Flexible headless commerce backend with cart, checkout, and order management",
+                tech: ["FastAPI", "PostgreSQL", "Redis", "Stripe", "Python"],
+                categories: ["backend"],
+                priority: "high",
+                usecases: ["ecommerce"],
+                maturity: "stable",
+                complexity: "intermediate",
+                features: ["Cart API", "Checkout", "Inventory", "Webhooks", "Multi-currency", "Tax Engine"],
+                hasDemo: true,
+                hasCLI: false,
+                securityFeatures: ["Authentication", "Rate Limiting", "CORS"],
+                lastUpdated: "2025-10-03",
+                repo: "headless-commerce-api"
+            },
+            {
+                name: "product-recommendation-engine",
+                description: "ML-powered product recommendation system with collaborative filtering",
+                tech: ["Python", "TensorFlow", "FastAPI", "Redis", "PostgreSQL"],
+                categories: ["ai-ml", "backend"],
+                priority: "high",
+                usecases: ["ecommerce", "ai-ml"],
+                maturity: "stable",
+                complexity: "advanced",
+                features: ["Collaborative Filter", "Real-time", "A/B Testing", "Analytics", "Personalization"],
+                hasDemo: true,
+                hasCLI: false,
+                securityFeatures: ["Authentication", "Rate Limiting", "CORS"],
+                lastUpdated: "2025-10-03",
+                repo: "product-recommendation-engine"
             }
         ];
 
@@ -1271,10 +1405,7 @@
 
         // Filter functionality
         let currentCategory = 'all';
-        let currentPriority = 'all';
         let currentUsecase = 'all';
-        let currentComplexity = 'all';
-        let currentMaturity = 'all';
         let currentSearch = '';
 
         function filterScaffolds() {
@@ -1284,20 +1415,8 @@
                 filtered = filtered.filter(s => s.categories.includes(currentCategory));
             }
 
-            if (currentPriority !== 'all') {
-                filtered = filtered.filter(s => s.priority === currentPriority);
-            }
-
             if (currentUsecase !== 'all') {
                 filtered = filtered.filter(s => s.usecases && s.usecases.includes(currentUsecase));
-            }
-
-            if (currentComplexity !== 'all') {
-                filtered = filtered.filter(s => s.complexity === currentComplexity);
-            }
-
-            if (currentMaturity !== 'all') {
-                filtered = filtered.filter(s => s.maturity === currentMaturity);
             }
 
             if (currentSearch) {
@@ -1323,42 +1442,12 @@
             });
         });
 
-        // Priority filter
-        document.querySelectorAll('[data-priority]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('[data-priority]').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentPriority = btn.dataset.priority;
-                filterScaffolds();
-            });
-        });
-
         // Use case filter
         document.querySelectorAll('[data-usecase]').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('[data-usecase]').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentUsecase = btn.dataset.usecase;
-                filterScaffolds();
-            });
-        });
-
-        // Complexity filter
-        document.querySelectorAll('[data-complexity]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('[data-complexity]').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentComplexity = btn.dataset.complexity;
-                filterScaffolds();
-            });
-        });
-
-        // Maturity filter
-        document.querySelectorAll('[data-maturity]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('[data-maturity]').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentMaturity = btn.dataset.maturity;
                 filterScaffolds();
             });
         });
