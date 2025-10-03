@@ -508,7 +508,7 @@
     <section class="hero">
         <div class="container">
             <h1>Production-Ready<br>Project Scaffolds</h1>
-            <p>47 comprehensive scaffolds for Next.js, React Native, FastAPI, AI/ML, Web3, and more. Built by Augustus Rivers at Offlabel Design.</p>
+            <p>59 comprehensive scaffolds including 12 advanced AI/ML templates for agents, RAG, multi-agent systems, and more. Built by Augustus Rivers at Offlabel Design.</p>
         </div>
     </section>
 
@@ -548,6 +548,20 @@
                 <button class="filter-btn" data-usecase="realtime">Real-time</button>
                 <button class="filter-btn" data-usecase="content">Content/Media</button>
             </div>
+            <div class="filters" style="margin-top: 12px;">
+                <label>Complexity:</label>
+                <button class="filter-btn active" data-complexity="all">All</button>
+                <button class="filter-btn" data-complexity="beginner">Beginner</button>
+                <button class="filter-btn" data-complexity="intermediate">Intermediate</button>
+                <button class="filter-btn" data-complexity="advanced">Advanced</button>
+            </div>
+            <div class="filters" style="margin-top: 12px;">
+                <label>Maturity:</label>
+                <button class="filter-btn active" data-maturity="all">All</button>
+                <button class="filter-btn" data-maturity="stable">Stable</button>
+                <button class="filter-btn" data-maturity="beta">Beta</button>
+                <button class="filter-btn" data-maturity="alpha">Alpha</button>
+            </div>
         </div>
 
         <!-- Scaffolds Grid -->
@@ -559,12 +573,12 @@
         <div class="stats-section">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <h3>47</h3>
+                    <h3>59</h3>
                     <p>Total Scaffolds</p>
                 </div>
                 <div class="stat-item">
-                    <h3>8</h3>
-                    <p>Categories</p>
+                    <h3>12</h3>
+                    <p>AI/ML Scaffolds</p>
                 </div>
                 <div class="stat-item">
                     <h3>100%</h3>
@@ -610,6 +624,188 @@
     <script>
         // Scaffold data
         const scaffolds = [
+            // 🤖 NEW AI/ML SCAFFOLDS (12 Advanced AI Templates)
+            {
+                name: "agent-tool-scaffold",
+                description: "Single-agent with tool registry, prompt manager, and memory",
+                tech: ["LangChain", "OpenAI", "TypeScript", "Redis"],
+                categories: ["ai-ml"],
+                priority: "high",
+                usecases: ["ai-ml", "enterprise"],
+                maturity: "stable",
+                complexity: "intermediate",
+                features: ["streaming", "memory", "tools", "unit-tests", "docker", "ci-cd"],
+                hasDemo: false,
+                hasCLI: true,
+                lastUpdated: "2025-01-03",
+                repo: "agent-tool-scaffold"
+            },
+            {
+                name: "rag-agentic-scaffold",
+                description: "RAG system with agentic capabilities and vector store integration",
+                tech: ["LangChain", "Pinecone", "OpenAI", "FastAPI", "Python"],
+                categories: ["ai-ml", "backend"],
+                priority: "high",
+                usecases: ["ai-ml", "enterprise"],
+                maturity: "stable",
+                complexity: "advanced",
+                features: ["rag", "vector-store", "streaming", "unit-tests", "docker", "ci-cd"],
+                hasDemo: true,
+                hasCLI: false,
+                lastUpdated: "2025-01-03",
+                repo: "rag-agentic-scaffold"
+            },
+            {
+                name: "multi-agent-orchestrator",
+                description: "Hierarchical multi-agent system with LangGraph orchestration",
+                tech: ["LangGraph", "OpenAI", "TypeScript", "Redis", "PostgreSQL"],
+                categories: ["ai-ml"],
+                priority: "high",
+                usecases: ["ai-ml", "enterprise"],
+                maturity: "beta",
+                complexity: "advanced",
+                features: ["multi-agent", "orchestration", "streaming", "unit-tests", "docker"],
+                hasDemo: true,
+                hasCLI: false,
+                lastUpdated: "2025-01-03",
+                repo: "multi-agent-orchestrator"
+            },
+            {
+                name: "ai-inference-server",
+                description: "Scalable inference server with batching, GPU support, and rate limiting",
+                tech: ["FastAPI", "vLLM", "PyTorch", "Redis", "Python"],
+                categories: ["ai-ml", "backend"],
+                priority: "high",
+                usecases: ["ai-ml", "api", "enterprise"],
+                maturity: "stable",
+                complexity: "advanced",
+                features: ["batching", "gpu-support", "rate-limiting", "monitoring", "docker", "kubernetes"],
+                hasDemo: false,
+                hasCLI: false,
+                lastUpdated: "2025-01-03",
+                repo: "ai-inference-server"
+            },
+            {
+                name: "ai-monitoring-metrics",
+                description: "LLM monitoring with cost tracking, latency metrics, and alerting",
+                tech: ["Prometheus", "Grafana", "Python", "PostgreSQL", "FastAPI"],
+                categories: ["ai-ml", "devops"],
+                priority: "high",
+                usecases: ["ai-ml", "enterprise"],
+                maturity: "stable",
+                complexity: "intermediate",
+                features: ["monitoring", "metrics", "cost-tracking", "alerting", "dashboard", "docker"],
+                hasDemo: true,
+                hasCLI: false,
+                lastUpdated: "2025-01-03",
+                repo: "ai-monitoring-metrics"
+            },
+            {
+                name: "ai-safety-guardrails",
+                description: "Safety filters, content moderation, and adversarial testing framework",
+                tech: ["OpenAI", "Python", "FastAPI", "Redis"],
+                categories: ["ai-ml", "backend"],
+                priority: "high",
+                usecases: ["ai-ml", "enterprise"],
+                maturity: "stable",
+                complexity: "intermediate",
+                features: ["content-moderation", "safety-filters", "adversarial-testing", "unit-tests", "docker"],
+                hasDemo: false,
+                hasCLI: false,
+                lastUpdated: "2025-01-03",
+                repo: "ai-safety-guardrails"
+            },
+            {
+                name: "multimodal-rag-scaffold",
+                description: "Multimodal RAG with vision, audio, and video processing capabilities",
+                tech: ["LangChain", "OpenAI Vision", "Whisper", "CLIP", "Python"],
+                categories: ["ai-ml", "content"],
+                priority: "high",
+                usecases: ["ai-ml", "content"],
+                maturity: "beta",
+                complexity: "advanced",
+                features: ["multimodal", "vision", "audio", "video", "rag", "docker"],
+                hasDemo: true,
+                hasCLI: false,
+                lastUpdated: "2025-01-03",
+                repo: "multimodal-rag-scaffold"
+            },
+            {
+                name: "edge-inference-scaffold",
+                description: "Local model inference with quantization, optimization, and cloud fallback",
+                tech: ["ONNX", "TensorFlow Lite", "TypeScript", "WebAssembly"],
+                categories: ["ai-ml", "mobile"],
+                priority: "high",
+                usecases: ["ai-ml"],
+                maturity: "beta",
+                complexity: "advanced",
+                features: ["edge-inference", "quantization", "offline-support", "fallback", "unit-tests"],
+                hasDemo: true,
+                hasCLI: false,
+                lastUpdated: "2025-01-03",
+                repo: "edge-inference-scaffold"
+            },
+            {
+                name: "mlops-pipeline-scaffold",
+                description: "MLOps pipeline with data versioning, experiment tracking, and automated retraining",
+                tech: ["MLflow", "Airflow", "DVC", "Python", "PostgreSQL"],
+                categories: ["ai-ml", "devops", "data"],
+                priority: "high",
+                usecases: ["ai-ml", "enterprise"],
+                maturity: "stable",
+                complexity: "advanced",
+                features: ["mlops", "data-versioning", "experiment-tracking", "retraining", "docker", "kubernetes"],
+                hasDemo: false,
+                hasCLI: true,
+                lastUpdated: "2025-01-03",
+                repo: "mlops-pipeline-scaffold"
+            },
+            {
+                name: "prompt-tuning-scaffold",
+                description: "Prompt versioning, A/B testing, and adapter layer management",
+                tech: ["LangChain", "Python", "PostgreSQL", "FastAPI"],
+                categories: ["ai-ml", "backend"],
+                priority: "high",
+                usecases: ["ai-ml", "saas"],
+                maturity: "beta",
+                complexity: "intermediate",
+                features: ["prompt-versioning", "ab-testing", "adapters", "unit-tests", "docker"],
+                hasDemo: true,
+                hasCLI: false,
+                lastUpdated: "2025-01-03",
+                repo: "prompt-tuning-scaffold"
+            },
+            {
+                name: "secrets-config-scaffold",
+                description: "Secure secrets management with vault integration and rotation",
+                tech: ["Vault", "AWS Secrets Manager", "Python", "TypeScript"],
+                categories: ["devops", "backend"],
+                priority: "high",
+                usecases: ["enterprise", "ai-ml"],
+                maturity: "stable",
+                complexity: "intermediate",
+                features: ["secrets-management", "rotation", "encryption", "audit-logging", "docker"],
+                hasDemo: false,
+                hasCLI: true,
+                lastUpdated: "2025-01-03",
+                repo: "secrets-config-scaffold"
+            },
+            {
+                name: "ai-deployment-scaffold",
+                description: "Production deployment infrastructure for AI workloads with Kubernetes",
+                tech: ["Kubernetes", "Docker", "Terraform", "Helm", "ArgoCD"],
+                categories: ["ai-ml", "devops"],
+                priority: "high",
+                usecases: ["ai-ml", "enterprise"],
+                maturity: "stable",
+                complexity: "advanced",
+                features: ["kubernetes", "terraform", "ci-cd", "auto-scaling", "monitoring"],
+                hasDemo: false,
+                hasCLI: true,
+                lastUpdated: "2025-01-03",
+                repo: "ai-deployment-scaffold"
+            },
+            // 📦 ORIGINAL 47 SCAFFOLDS
             {
                 name: "nextjs-saas-starter",
                 description: "Complete Next.js 14 SaaS starter with authentication, payments, dashboard, and landing page",
@@ -1003,14 +1199,23 @@
                         <div>
                             <h3>${scaffold.name}</h3>
                             <span class="priority-badge priority-${scaffold.priority}">${scaffold.priority}</span>
+                            ${scaffold.maturity ? `<span class="priority-badge priority-${scaffold.maturity === 'stable' ? 'low' : scaffold.maturity === 'beta' ? 'medium' : 'high'}" style="margin-left: 8px;">${scaffold.maturity}</span>` : ''}
                         </div>
                     </div>
                     <p>${scaffold.description}</p>
+                    ${scaffold.complexity ? `<p style="font-size: 12px; color: #a3a3a3; margin-bottom: 12px;">Complexity: <strong>${scaffold.complexity}</strong></p>` : ''}
                     <div class="tech-stack">
                         ${scaffold.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                     </div>
+                    ${scaffold.features && scaffold.features.length > 0 ? `
+                    <div class="tech-stack" style="margin-top: 8px;">
+                        ${scaffold.features.slice(0, 4).map(f => `<span class="tech-tag" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; font-size: 11px;">✓ ${f}</span>`).join('')}
+                        ${scaffold.features.length > 4 ? `<span class="tech-tag" style="background: #e5e5e5; font-size: 11px;">+${scaffold.features.length - 4} more</span>` : ''}
+                    </div>` : ''}
                     <div class="category-tags">
                         ${scaffold.categories.map(cat => `<span class="category-tag">${cat}</span>`).join('')}
+                        ${scaffold.hasDemo ? '<span class="category-tag" style="background: #10b981;">🎮 Demo</span>' : ''}
+                        ${scaffold.hasCLI ? '<span class="category-tag" style="background: #8b5cf6;">⚡ CLI</span>' : ''}
                     </div>
                     <a href="https://github.com/offlabel-scaffolds/${scaffold.repo}" target="_blank" class="github-link">
                         <span>View on GitHub</span>
@@ -1020,8 +1225,16 @@
             `).join('');
         }
 
-        // Add default usecases to scaffolds that don't have them
+        // Add default metadata to scaffolds that don't have them
         scaffolds.forEach(scaffold => {
+            // Default maturity and complexity for older scaffolds
+            if (!scaffold.maturity) scaffold.maturity = 'stable';
+            if (!scaffold.complexity) scaffold.complexity = 'intermediate';
+            if (!scaffold.features) scaffold.features = ['unit-tests', 'docker'];
+            if (scaffold.hasDemo === undefined) scaffold.hasDemo = false;
+            if (scaffold.hasCLI === undefined) scaffold.hasCLI = false;
+            if (!scaffold.lastUpdated) scaffold.lastUpdated = '2024-12-15';
+            
             if (!scaffold.usecases) {
                 scaffold.usecases = [];
                 
@@ -1060,6 +1273,8 @@
         let currentCategory = 'all';
         let currentPriority = 'all';
         let currentUsecase = 'all';
+        let currentComplexity = 'all';
+        let currentMaturity = 'all';
         let currentSearch = '';
 
         function filterScaffolds() {
@@ -1077,12 +1292,21 @@
                 filtered = filtered.filter(s => s.usecases && s.usecases.includes(currentUsecase));
             }
 
+            if (currentComplexity !== 'all') {
+                filtered = filtered.filter(s => s.complexity === currentComplexity);
+            }
+
+            if (currentMaturity !== 'all') {
+                filtered = filtered.filter(s => s.maturity === currentMaturity);
+            }
+
             if (currentSearch) {
                 const search = currentSearch.toLowerCase();
                 filtered = filtered.filter(s => 
                     s.name.toLowerCase().includes(search) ||
                     s.description.toLowerCase().includes(search) ||
-                    s.tech.some(t => t.toLowerCase().includes(search))
+                    s.tech.some(t => t.toLowerCase().includes(search)) ||
+                    (s.features && s.features.some(f => f.toLowerCase().includes(search)))
                 );
             }
 
@@ -1115,6 +1339,26 @@
                 document.querySelectorAll('[data-usecase]').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentUsecase = btn.dataset.usecase;
+                filterScaffolds();
+            });
+        });
+
+        // Complexity filter
+        document.querySelectorAll('[data-complexity]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('[data-complexity]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentComplexity = btn.dataset.complexity;
+                filterScaffolds();
+            });
+        });
+
+        // Maturity filter
+        document.querySelectorAll('[data-maturity]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('[data-maturity]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentMaturity = btn.dataset.maturity;
                 filterScaffolds();
             });
         });
