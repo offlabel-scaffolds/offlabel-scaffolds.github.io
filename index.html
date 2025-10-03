@@ -1,1151 +1,456 @@
-<!DOCTYPE html><!DOCTYPE html>
-
-<html lang="en"><html lang="en">
-
-<head><head>
-
-    <meta charset="UTF-8">    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>Offlabel Scaffolds - Production-Ready Project Templates</title>
-
-    <!-- Primary Meta Tags -->    <meta name="description" content="47 production-ready scaffolds for every major tech stack. Built by Augustus Rivers because starting from scratch every time sucks.">
-
-    <title>Offlabel Scaffolds - 47 Production-Ready Project Templates | SaaS, AI/ML, Web3, Mobile</title>    <meta name="author" content="Augustus Rivers">
-
-    <meta name="title" content="Offlabel Scaffolds - 47 Production-Ready Project Templates | SaaS, AI/ML, Web3, Mobile">    <meta property="og:title" content="Offlabel Scaffolds - 47 Production-Ready Templates">
-
-    <meta name="description" content="Skip the boilerplate. 47 production-ready project scaffolds for Next.js, React Native, FastAPI, AI/ML, Web3, and more. MIT licensed. Built by Augustus Rivers at Offlabel Design.">    <meta property="og:description" content="Ship faster with production-ready scaffolds for Next.js, AI/ML, Web3, Mobile, and more.">
-
-    <meta name="keywords" content="project scaffolds, boilerplate code, nextjs starter, react native template, fastapi boilerplate, saas starter kit, ai ml templates, web3 dapp scaffold, production ready templates, open source scaffolds, MIT license, typescript templates, python scaffolds, rust templates, go microservices, mobile app templates, developer tools, coding templates, Augustus Rivers, Offlabel Design">    <meta property="og:url" content="https://offlabel-scaffolds.github.io">
-
-    <meta name="author" content="Augustus Rivers">    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <meta name="robots" content="index, follow">    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="canonical" href="https://offlabel-scaffolds.github.io/">    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-        <style>
-
-    <!-- Open Graph / Facebook -->        * {
-
-    <meta property="og:type" content="website">            margin: 0;
-
-    <meta property="og:url" content="https://offlabel-scaffolds.github.io/">            padding: 0;
-
-    <meta property="og:title" content="Offlabel Scaffolds - 47 Production-Ready Project Templates">            box-sizing: border-box;
-
-    <meta property="og:description" content="Skip the boilerplate. 47 production-ready project scaffolds for Next.js, React Native, FastAPI, AI/ML, Web3, and more. MIT licensed.">        }
-
-    <meta property="og:site_name" content="Offlabel Scaffolds">
-
-            body {
-
-    <!-- Twitter -->            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-
-    <meta name="twitter:card" content="summary_large_image">            line-height: 1.6;
-
-    <meta name="twitter:url" content="https://offlabel-scaffolds.github.io/">            color: #1a1a1a;
-
-    <meta name="twitter:title" content="Offlabel Scaffolds - 47 Production-Ready Project Templates">            background: #fafafa;
-
-    <meta name="twitter:description" content="Skip the boilerplate. 47 production-ready project scaffolds for Next.js, React Native, FastAPI, AI/ML, Web3, and more.">        }
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-
-    <!-- Additional SEO -->        .container {
-
-    <meta name="language" content="English">            max-width: 1200px;
-
-    <meta name="revisit-after" content="7 days">            margin: 0 auto;
-
-    <meta name="distribution" content="global">            padding: 0 20px;
-
-    <meta name="rating" content="general">        }
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-            /* Header */
-
-    <!-- Schema.org Structured Data -->        header {
-
-    <script type="application/ld+json">            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-
-    {            color: white;
-
-      "@context": "https://schema.org",            padding: 100px 0 80px;
-
-      "@type": "SoftwareSourceCode",            text-align: center;
-
-      "name": "Offlabel Scaffolds",        }
-
-      "description": "47 production-ready project scaffolds for modern development",
-
-      "author": {        header h1 {
-
-        "@type": "Person",            font-size: 3.5rem;
-
-        "name": "Augustus Rivers",            font-weight: 800;
-
-        "email": "hello@offlabel.design",            margin-bottom: 20px;
-
-        "url": "https://offlabel.design"            letter-spacing: -0.02em;
-
-      },        }
-
-      "codeRepository": "https://github.com/offlabel-scaffolds",
-
-      "programmingLanguage": ["JavaScript", "TypeScript", "Python", "Rust", "Go"],        header p {
-
-      "license": "https://opensource.org/licenses/MIT",            font-size: 1.3rem;
-
-      "offers": {            opacity: 0.95;
-
-        "@type": "Offer",            max-width: 700px;
-
-        "price": "0",            margin: 0 auto 30px;
-
-        "priceCurrency": "USD"        }
-
-      }
-
-    }        .subtitle {
-
-    </script>            font-size: 1rem;
-
-                opacity: 0.85;
-
-    <!-- Fonts -->            font-style: italic;
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">        }
-
+    <title>Offlabel Scaffolds - 47 Production-Ready Project Templates</title>
+    <meta name="description" content="Skip the boilerplate. 47 production-ready project scaffolds for Next.js, React Native, FastAPI, AI/ML, Web3, and more. MIT licensed.">
+    <meta name="keywords" content="project scaffolds, boilerplate code, nextjs starter, react native template, fastapi boilerplate, saas starter kit, ai ml templates, web3 dapp scaffold, production ready templates, open source scaffolds, MIT license">
+    <meta name="author" content="Augustus Rivers">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Offlabel Scaffolds - 47 Production-Ready Templates">
+    <meta property="og:description" content="Skip the boilerplate. Production-ready scaffolds for every major tech stack.">
+    <meta property="og:url" content="https://offlabel-scaffolds.github.io">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">        .stats {
-
-                display: flex;
-
-    <style>            justify-content: center;
-
-        * {            gap: 40px;
-
-            margin: 0;            margin-top: 40px;
-
-            padding: 0;            flex-wrap: wrap;
-
-            box-sizing: border-box;        }
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .stat {
-
-        :root {            text-align: center;
-
-            --primary: #667eea;        }
-
+        :root {
+            --primary: #667eea;
             --secondary: #764ba2;
-
-            --accent: #f093fb;        .stat-number {
-
-            --dark: #0f172a;            font-size: 2.5rem;
-
-            --gray: #64748b;            font-weight: 700;
-
-            --light: #f8fafc;            display: block;
-
-        }        }
-
-
-
-        body {        .stat-label {
-
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;            font-size: 0.9rem;
-
-            line-height: 1.6;            opacity: 0.85;
-
-            color: var(--dark);        }
-
-            background: #ffffff;
-
-            overflow-x: hidden;        /* Navigation */
-
-        }        nav {
-
-            background: white;
-
-        /* Animated Background */            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-
-        .animated-bg {            position: sticky;
-
-            position: fixed;            top: 0;
-
-            top: 0;            z-index: 100;
-
-            left: 0;        }
-
-            width: 100%;
-
-            height: 100vh;        nav .container {
-
-            z-index: -1;            display: flex;
-
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);            justify-content: space-between;
-
-            background-size: 400% 400%;            align-items: center;
-
-            animation: gradient 15s ease infinite;            padding: 15px 20px;
-
-        }        }
-
-
-
-        @keyframes gradient {        .nav-logo {
-
-            0% { background-position: 0% 50%; }            display: flex;
-
-            50% { background-position: 100% 50%; }            align-items: center;
-
-            100% { background-position: 0% 50%; }            gap: 10px;
-
-        }            font-weight: 600;
-
-            text-decoration: none;
-
-        .container {            color: #1a1a1a;
-
-            max-width: 1400px;        }
-
-            margin: 0 auto;
-
-            padding: 0 40px;        .nav-logo:hover {
-
-        }            color: #667eea;
-
+            --accent: #f093fb;
+            --dark: #0f172a;
+            --gray: #64748b;
         }
 
-        /* Navigation */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #ffffff;
+            overflow-x: hidden;
+        }
 
-        nav {        .nav-links {
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
 
-            position: fixed;            display: flex;
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-            top: 0;            gap: 30px;
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
 
-            left: 0;            list-style: none;
-
-            right: 0;            align-items: center;
-
-            z-index: 1000;        }
-
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
             backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
 
-            background: rgba(255, 255, 255, 0.8);        .nav-links a {
-
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);            color: #666;
-
-            transition: all 0.3s ease;            text-decoration: none;
-
-        }            font-weight: 500;
-
-            transition: color 0.2s;
-
-        nav.scrolled {        }
-
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
-        }        .nav-links a:hover {
-
-            color: #667eea;
-
-        nav .container {        }
-
+        nav .container {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
 
-            justify-content: space-between;        /* Categories */
-
-            align-items: center;        .categories {
-
-            padding: 20px 40px;            padding: 60px 0;
-
-        }        }
-
-
-
-        .logo {        .section-title {
-
-            font-size: 1.5rem;            font-size: 2.5rem;
-
-            font-weight: 800;            font-weight: 700;
-
-            background: linear-gradient(135deg, var(--primary), var(--secondary));            margin-bottom: 15px;
-
-            -webkit-background-clip: text;            text-align: center;
-
-            -webkit-text-fill-color: transparent;        }
-
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
 
-        }        .section-desc {
-
-            text-align: center;
-
-        .nav-links {            color: #666;
-
-            display: flex;            font-size: 1.1rem;
-
-            gap: 40px;            margin-bottom: 50px;
-
-            list-style: none;            max-width: 700px;
-
-            align-items: center;            margin-left: auto;
-
-        }            margin-right: auto;
-
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
-
-            color: var(--dark);        .category-grid {
-
-            text-decoration: none;            display: grid;
-
-            font-weight: 500;            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-            transition: all 0.3s ease;            gap: 30px;
-
-            position: relative;            margin-bottom: 40px;
-
-        }        }
-
-
-
-        .nav-links a:hover {        .category-card {
-
-            color: var(--primary);            background: white;
-
-        }            border-radius: 12px;
-
-            padding: 30px;
-
-        .nav-links a::after {            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-
-            content: '';            transition: transform 0.2s, box-shadow 0.2s;
-
-            position: absolute;            cursor: pointer;
-
-            bottom: -5px;        }
-
-            left: 0;
-
-            width: 0;        .category-card:hover {
-
-            height: 2px;            transform: translateY(-5px);
-
-            background: var(--primary);            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
-
-            transition: width 0.3s ease;        }
-
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
         }
 
-        .category-icon {
+        .nav-links a:hover {
+            color: var(--primary);
+        }
 
-        .nav-links a:hover::after {            font-size: 2.5rem;
-
-            width: 100%;            margin-bottom: 15px;
-
-        }        }
-
-
-
-        .contact-btn {        .category-name {
-
-            padding: 12px 32px !important;            font-size: 1.4rem;
-
-            background: linear-gradient(135deg, var(--primary), var(--secondary));            font-weight: 600;
-
-            color: white !important;            margin-bottom: 10px;
-
-            border-radius: 50px;        }
-
+        .contact-btn {
+            padding: 12px 32px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white !important;
+            border-radius: 50px;
             font-weight: 600;
-
-            text-decoration: none;        .category-desc {
-
-            transition: all 0.3s ease;            color: #666;
-
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);            margin-bottom: 15px;
-
-        }            font-size: 0.95rem;
-
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+        }
 
-            transform: translateY(-2px);        .category-count {
-
-            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);            color: #667eea;
-
-        }            font-weight: 600;
-
-            font-size: 0.9rem;
-
-        .contact-btn::after {        }
-
-            display: none;
-
-        }        /* Scaffolds List */
-
-        .scaffolds-section {
-
-        /* Hero Section */            background: white;
-
-        .hero {            padding: 60px 0;
-
-            min-height: 100vh;        }
-
+        .hero {
+            min-height: 100vh;
             display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
 
-            align-items: center;        .scaffold-grid {
-
-            justify-content: center;            display: grid;
-
-            text-align: center;            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-
-            color: white;            gap: 20px;
-
-            padding-top: 80px;        }
-
-            position: relative;
-
-        }        .scaffold-card {
-
-            background: #fafafa;
-
-        .hero-content {            border: 2px solid #e5e5e5;
-
-            position: relative;            border-radius: 10px;
-
-            z-index: 1;            padding: 20px;
-
-            animation: fadeInUp 1s ease;            transition: all 0.2s;
-
-        }            text-decoration: none;
-
-            color: inherit;
-
-        @keyframes fadeInUp {            display: block;
-
-            from {        }
-
-                opacity: 0;
-
-                transform: translateY(30px);        .scaffold-card:hover {
-
-            }            border-color: #667eea;
-
-            to {            transform: translateY(-3px);
-
-                opacity: 1;            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.1);
-
-                transform: translateY(0);        }
-
-            }
-
-        }        .scaffold-name {
-
-            font-size: 1rem;
-
-        .hero h1 {            font-weight: 600;
-
-            font-size: clamp(3rem, 8vw, 6rem);            margin-bottom: 8px;
-
-            font-weight: 900;            color: #1a1a1a;
-
-            margin-bottom: 30px;        }
-
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 30px;
             letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
 
-            line-height: 1.1;        .scaffold-desc {
-
-            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);            font-size: 0.85rem;
-
-        }            color: #666;
-
-            margin-bottom: 12px;
-
-        .hero .tagline {        }
-
+        .hero .tagline {
             font-size: clamp(1.2rem, 3vw, 1.8rem);
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
 
-            opacity: 0.95;        .scaffold-tags {
+        .hero .subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            opacity: 0.85;
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 50px;
+        }
 
-            max-width: 800px;            display: flex;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 60px auto 40px;
+        }
 
-            margin: 0 auto 20px;            gap: 6px;
+        .stat-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
 
-            font-weight: 400;            flex-wrap: wrap;
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+        }
 
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);        }
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 10px;
+        }
 
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 40px;
+            background: white;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-content {
+            background: white;
+            position: relative;
+            z-index: 1;
+            border-radius: 40px 40px 0 0;
+            margin-top: -40px;
+            padding: 80px 0;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-desc {
+            font-size: 1.3rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 40px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
+        }
+
+        .category-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .category-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .category-desc {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .category-count {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 60px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 20px 60px 20px 24px;
+            font-size: 1.1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            outline: none;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--gray);
+        }
+
+        .scaffold-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .scaffold-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 30px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scaffold-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .scaffold-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .scaffold-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+        }
+
+        .scaffold-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .scaffold-desc {
+            font-size: 1rem;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .scaffold-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
         }
 
         .tag {
-
-        .hero .subtitle {            background: #667eea;
-
-            font-size: clamp(1rem, 2vw, 1.3rem);            color: white;
-
-            opacity: 0.85;            padding: 3px 10px;
-
-            font-weight: 300;            border-radius: 12px;
-
-            font-style: italic;            font-size: 0.75rem;
-
-            margin-bottom: 50px;            font-weight: 500;
-
-        }        }
-
-
-
-        .stats-grid {        .tag.priority {
-
-            display: grid;            background: #f43f5e;
-
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));        }
-
-            gap: 40px;
-
-            max-width: 900px;        /* Footer */
-
-            margin: 60px auto 40px;        footer {
-
-        }            background: #1a1a1a;
-
-            color: white;
-
-        .stat-card {            padding: 60px 0 40px;
-
-            background: rgba(255, 255, 255, 0.15);            margin-top: 80px;
-
-            backdrop-filter: blur(10px);        }
-
-            border: 1px solid rgba(255, 255, 255, 0.2);
-
-            border-radius: 20px;        .footer-content {
-
-            padding: 30px;            display: grid;
-
-            transition: all 0.3s ease;            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-        }            gap: 40px;
-
-            margin-bottom: 40px;
-
-        .stat-card:hover {        }
-
-            transform: translateY(-5px);
-
-            background: rgba(255, 255, 255, 0.25);        .footer-section h3 {
-
-        }            margin-bottom: 20px;
-
-            font-size: 1.2rem;
-
-        .stat-number {        }
-
-            font-size: 3.5rem;
-
-            font-weight: 900;        .footer-section p,
-
-            display: block;        .footer-section a {
-
-            margin-bottom: 10px;            color: #999;
-
-        }            text-decoration: none;
-
-            line-height: 2;
-
-        .stat-label {        }
-
-            font-size: 1rem;
-
-            opacity: 0.9;        .footer-section a:hover {
-
-            font-weight: 500;            color: #667eea;
-
-        }        }
-
-
-
-        .hero-cta {        .footer-bottom {
-
-            display: inline-flex;            text-align: center;
-
-            align-items: center;            padding-top: 40px;
-
-            gap: 12px;            border-top: 1px solid #333;
-
-            padding: 18px 40px;            color: #666;
-
-            background: white;        }
-
-            color: var(--primary);
-
-            text-decoration: none;        .cta-button {
-
-            border-radius: 50px;            display: inline-block;
-
-            font-weight: 700;            background: white;
-
-            font-size: 1.1rem;            color: #667eea;
-
-            transition: all 0.3s ease;            padding: 12px 30px;
-
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);            border-radius: 6px;
-
-            margin-top: 20px;            text-decoration: none;
-
-        }            font-weight: 600;
-
-            margin-top: 20px;
-
-        .hero-cta:hover {            transition: transform 0.2s;
-
-            transform: translateY(-3px);        }
-
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
-
-        }        .cta-button:hover {
-
-            transform: scale(1.05);
-
-        .scroll-indicator {        }
-
-            position: absolute;
-
-            bottom: 40px;        @media (max-width: 768px) {
-
-            left: 50%;            header h1 {
-
-            transform: translateX(-50%);                font-size: 2.5rem;
-
-            animation: bounce 2s infinite;            }
-
-        }
-
-            header p {
-
-        @keyframes bounce {                font-size: 1.1rem;
-
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }            }
-
-            40% { transform: translateX(-50%) translateY(-10px); }
-
-            60% { transform: translateX(-50%) translateY(-5px); }            .stats {
-
-        }                gap: 20px;
-
-            }
-
-        /* Main Content */
-
-        .main-content {            .category-grid {
-
-            background: white;                grid-template-columns: 1fr;
-
-            position: relative;            }
-
-            z-index: 1;        }
-
-            border-radius: 40px 40px 0 0;    </style>
-
-            margin-top: -40px;</head>
-
-            padding: 80px 0;<body>
-
-        }    <header>
-
-        <div class="container">
-
-        .section {            <h1>Offlabel Scaffolds</h1>
-
-            padding: 80px 0;            <p>47 production-ready project templates for every major tech stack</p>
-
-        }            <p class="subtitle">Because life's too short to rebuild authentication for the 47th time.</p>
-
-            
-
-        .section-header {            <div class="stats">
-
-            text-align: center;                <div class="stat">
-
-            margin-bottom: 60px;                    <span class="stat-number">47</span>
-
-        }                    <span class="stat-label">Scaffolds</span>
-
-                </div>
-
-        .section-title {                <div class="stat">
-
-            font-size: clamp(2.5rem, 5vw, 4rem);                    <span class="stat-number">12</span>
-
-            font-weight: 900;                    <span class="stat-label">Categories</span>
-
-            margin-bottom: 20px;                </div>
-
-            background: linear-gradient(135deg, var(--primary), var(--secondary));                <div class="stat">
-
-            -webkit-background-clip: text;                    <span class="stat-number">100%</span>
-
-            -webkit-text-fill-color: transparent;                    <span class="stat-label">Production Ready</span>
-
-            background-clip: text;                </div>
-
-        }            </div>
-
-
-
-        .section-desc {            <a href="https://github.com/offlabel-scaffolds" class="cta-button">View on GitHub</a>
-
-            font-size: 1.3rem;        </div>
-
-            color: var(--gray);    </header>
-
-            max-width: 700px;
-
-            margin: 0 auto;        <nav>
-
-            line-height: 1.8;        <div class="container">
-
-        }            <a href="/" class="nav-logo">
-
-                <div class="logo">Offlabel Scaffolds</div>
-
-        /* Category Grid */            </a>
-
-        .category-grid {            <ul class="nav-links">
-
-            display: grid;                <li><a href="#categories">Categories</a></li>
-
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));                <li><a href="#scaffolds">Scaffolds</a></li>
-
-            gap: 30px;                <li><a href="https://github.com/offlabel-scaffolds" target="_blank">GitHub</a></li>
-
-            margin-top: 60px;                <li><a href="https://offlabel.design" target="_blank" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 8px 20px; border-radius: 20px; transition: all 0.3s ease;">Offlabel Design ✨</a></li>
-
-        }            </ul>
-
-        </div>
-
-        .category-card {    </nav>
-
-            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-
-            border: 2px solid #e2e8f0;    <section class="categories" id="categories">
-
-            border-radius: 24px;        <div class="container">
-
-            padding: 40px;            <h2 class="section-title">Browse by Category</h2>
-
-            cursor: pointer;            <p class="section-desc">
-
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);                Every scaffold includes production-ready configuration, documentation that doesn't suck, 
-
-            position: relative;                and proper error handling. Not tutorial code—real shit you can deploy.
-
-            overflow: hidden;            </p>
-
-        }
-
-            <div class="category-grid">
-
-        .category-card::before {                <div class="category-card" onclick="filterScaffolds('saas')">
-
-            content: '';                    <div class="category-icon">🚀</div>
-
-            position: absolute;                    <h3 class="category-name">SaaS Platforms</h3>
-
-            top: 0;                    <p class="category-desc">Full-stack SaaS with auth, billing, and databases</p>
-
-            left: 0;                    <span class="category-count">5 scaffolds</span>
-
-            right: 0;                </div>
-
-            height: 4px;
-
-            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));                <div class="category-card" onclick="filterScaffolds('ai')">
-
-            transform: scaleX(0);                    <div class="category-icon">🤖</div>
-
-            transition: transform 0.4s ease;                    <h3 class="category-name">AI & Machine Learning</h3>
-
-        }                    <p class="category-desc">LLMs, RAG, computer vision, training pipelines</p>
-
-                    <span class="category-count">9 scaffolds</span>
-
-        .category-card:hover::before {                </div>
-
-            transform: scaleX(1);
-
-        }                <div class="category-card" onclick="filterScaffolds('mobile')">
-
-                    <div class="category-icon">📱</div>
-
-        .category-card:hover {                    <h3 class="category-name">Mobile Apps</h3>
-
-            transform: translateY(-10px);                    <p class="category-desc">React Native, Flutter, cross-platform</p>
-
-            border-color: var(--primary);                    <span class="category-count">4 scaffolds</span>
-
-            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);                </div>
-
-        }
-
-                <div class="category-card" onclick="filterScaffolds('web3')">
-
-        .category-icon {                    <div class="category-icon">🌐</div>
-
-            font-size: 3.5rem;                    <h3 class="category-name">Web3 & Blockchain</h3>
-
-            margin-bottom: 20px;                    <p class="category-desc">Solana, NFT, DApps, smart contracts</p>
-
-            display: block;                    <span class="category-count">4 scaffolds</span>
-
-        }                </div>
-
-
-
-        .category-name {                <div class="category-card" onclick="filterScaffolds('backend')">
-
-            font-size: 1.5rem;                    <div class="category-icon">⚙️</div>
-
-            font-weight: 700;                    <h3 class="category-name">Backend APIs</h3>
-
-            margin-bottom: 12px;                    <p class="category-desc">FastAPI, Node.js, Rust, Go microservices</p>
-
-            color: var(--dark);                    <span class="category-count">8 scaffolds</span>
-
-        }                </div>
-
-
-
-        .category-desc {                <div class="category-card" onclick="filterScaffolds('devops')">
-
-            color: var(--gray);                    <div class="category-icon">🛠️</div>
-
-            margin-bottom: 20px;                    <h3 class="category-name">DevOps & Infrastructure</h3>
-
-            line-height: 1.6;                    <p class="category-desc">Docker, Kubernetes, CI/CD, monitoring</p>
-
-        }                    <span class="category-count">6 scaffolds</span>
-
-                </div>
-
-        .category-count {
-
-            display: inline-block;                <div class="category-card" onclick="filterScaffolds('healthcare')">
-
-            padding: 8px 20px;                    <div class="category-icon">🏥</div>
-
-            background: linear-gradient(135deg, var(--primary), var(--secondary));                    <h3 class="category-name">Healthcare & Fintech</h3>
-
-            color: white;                    <p class="category-desc">HIPAA-compliant, FHIR, banking, payments</p>
-
-            border-radius: 50px;                    <span class="category-count">4 scaffolds</span>
-
-            font-size: 0.9rem;                </div>
-
-            font-weight: 600;
-
-        }                <div class="category-card" onclick="filterScaffolds('frontend')">
-
-                    <div class="category-icon">🎨</div>
-
-        /* Search Bar */                    <h3 class="category-name">Frontend & UI</h3>
-
-        .search-container {                    <p class="category-desc">Design systems, component libraries, docs</p>
-
-            max-width: 600px;                    <span class="category-count">3 scaffolds</span>
-
-            margin: 0 auto 60px;                </div>
-
-            position: relative;            </div>
-
-        }        </div>
-
-    </section>
-
-        .search-input {
-
-            width: 100%;    <section class="scaffolds-section" id="scaffolds">
-
-            padding: 20px 60px 20px 24px;        <div class="container">
-
-            font-size: 1.1rem;            <h2 class="section-title">All 47 Scaffolds</h2>
-
-            border: 2px solid #e2e8f0;            <p class="section-desc">
-
-            border-radius: 50px;                Click any scaffold to view the code on GitHub. Every one is MIT licensed—do whatever you want with it.
-
-            outline: none;            </p>
-
-            transition: all 0.3s ease;
-
-            font-family: 'Inter', sans-serif;            <div class="scaffold-grid" id="scaffold-list">
-
-        }                <!-- Scaffolds will be loaded here via JavaScript -->
-
-            </div>
-
-        .search-input:focus {        </div>
-
-            border-color: var(--primary);    </section>
-
-            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
-
-        }    <footer>
-
-        <div class="container">
-
-        .search-icon {            <div class="footer-content">
-
-            position: absolute;                <div class="footer-section">
-
-            right: 24px;                    <h3>Offlabel Scaffolds</h3>
-
-            top: 50%;                    <p>Production-ready project templates for developers who want to ship fast without cutting corners.</p>
-
-            transform: translateY(-50%);                    <p>Built with ❤️ (and way too much coffee)</p>
-
-            font-size: 1.5rem;                </div>
-
-            color: var(--gray);
-
-        }                <div class="footer-section">
-
-                    <h3>Quick Links</h3>
-
-        /* Scaffold Grid */                    <p><a href="https://github.com/offlabel-scaffolds">GitHub Organization</a></p>
-
-        .scaffold-grid {                    <p><a href="https://offlabel.design">Offlabel Design</a></p>
-
-            display: grid;                    <p><a href="https://convert.offlabel.design" target="_blank">Format Converter Tool</a></p>
-
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));                    <p><a href="mailto:hello@offlabel.design">Email Us</a></p>
-
-            gap: 30px;                </div>
-
-        }
-
-                <div class="footer-section">
-
-        .scaffold-card {                    <h3>Built By</h3>
-
-            background: white;                    <p><strong>Augustus Rivers</strong></p>
-
-            border: 2px solid #e2e8f0;                    <p>Email: hello@offlabel.design</p>
-
-            border-radius: 20px;                    <p>Website: <a href="https://offlabel.design">offlabel.design</a></p>
-
-            padding: 30px;                </div>
-
-            text-decoration: none;
-
-            color: inherit;                <div class="footer-section">
-
-            display: block;                    <h3>License</h3>
-
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);                    <p>All scaffolds are MIT licensed. Use them for whatever you want—personal projects, commercial products, client work, whatever.</p>
-
-            position: relative;                </div>
-
-            overflow: hidden;            </div>
-
-        }
-
-            <div class="footer-bottom">
-
-        .scaffold-card::before {                <p>&copy; 2025 Augustus Rivers - Offlabel Design. All scaffolds MIT licensed.</p>
-
-            content: '';                <p style="margin-top: 10px; font-size: 0.9rem;">
-
-            position: absolute;                    Need a <a href="https://convert.offlabel.design" target="_blank" style="color: #667eea; text-decoration: underline;">format converter</a>? We built that too.
-
-            top: 0;                </p>
-
-            left: 0;            </div>
-
-            right: 0;        </div>
-
-            height: 3px;    </footer>
-
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-
-            transform: scaleX(0);    <script>
-
-            transform-origin: left;        // Scaffold data
-
-            transition: transform 0.3s ease;        const scaffolds = [
-
-        }            { name: 'scaffold-nextjs-saas', desc: 'Next.js 15 SaaS with Stripe & auth', tags: ['nextjs', 'saas', 'priority'], category: 'saas' },
-
-            { name: 'scaffold-fastapi-backend', desc: 'FastAPI with PostgreSQL & auth', tags: ['python', 'api', 'priority'], category: 'backend' },
-
-        .scaffold-card:hover::before {            { name: 'scaffold-react-native-consumer', desc: 'Expo mobile app with offline-first', tags: ['mobile', 'react-native', 'priority'], category: 'mobile' },
-
-            transform: scaleX(1);            { name: 'scaffold-llm-finetuning', desc: 'LLM fine-tuning pipeline', tags: ['ai', 'ml', 'python'], category: 'ai' },
-
-        }            { name: 'scaffold-rag-app', desc: 'RAG application with embeddings', tags: ['ai', 'llm', 'python'], category: 'ai' },
-
-            { name: 'scaffold-computer-vision', desc: 'CV model serving API', tags: ['ai', 'python', 'ml'], category: 'ai' },
-
-        .scaffold-card:hover {            { name: 'scaffold-multimodal-ai', desc: 'Multimodal AI processing', tags: ['ai', 'python'], category: 'ai' },
-
-            transform: translateY(-8px);            { name: 'scaffold-vector-db-app', desc: 'Vector database application', tags: ['ai', 'database'], category: 'ai' },
-
-            border-color: var(--primary);            { name: 'scaffold-ai-agent-runtime', desc: 'AI agent orchestration', tags: ['ai', 'python'], category: 'ai' },
-
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);            { name: 'scaffold-multiagent-orchestration', desc: 'Multi-agent system', tags: ['ai', 'python'], category: 'ai' },
-
-        }            { name: 'scaffold-ml-training-pipeline', desc: 'ML model training pipeline', tags: ['ml', 'python'], category: 'ai' },
-
-            { name: 'scaffold-solana-app', desc: 'Solana dApp scaffold', tags: ['web3', 'solana', 'rust'], category: 'web3' },
-
-        .scaffold-name {            { name: 'scaffold-nft-marketplace', desc: 'NFT marketplace platform', tags: ['web3', 'nft'], category: 'web3' },
-
-            font-size: 1.2rem;            { name: 'scaffold-web3-dapp', desc: 'Web3 decentralized app', tags: ['web3'], category: 'web3' },
-
-            font-weight: 700;            { name: 'scaffold-banking-saas', desc: 'Banking platform core', tags: ['fintech', 'saas'], category: 'healthcare' },
-
-            margin-bottom: 12px;            { name: 'scaffold-fintech-core', desc: 'Fintech application core', tags: ['fintech'], category: 'healthcare' },
-
-            color: var(--dark);            { name: 'scaffold-healthcare-fhir-api', desc: 'FHIR-compliant healthcare API', tags: ['healthcare', 'api'], category: 'healthcare' },
-
-        }            { name: 'scaffold-telemedicine-app', desc: 'Telemedicine platform', tags: ['healthcare', 'saas'], category: 'healthcare' },
-
-            { name: 'scaffold-bun-backend', desc: 'High-performance Bun API', tags: ['node', 'api'], category: 'backend' },
-
-        .scaffold-desc {            { name: 'scaffold-node-api', desc: 'Node.js REST API', tags: ['node', 'api'], category: 'backend' },
-
-            font-size: 1rem;            { name: 'scaffold-go-microservice', desc: 'Go microservice', tags: ['go', 'api'], category: 'backend' },
-
-            color: var(--gray);            { name: 'scaffold-rust-service', desc: 'Rust backend service', tags: ['rust', 'api'], category: 'backend' },
-
-            margin-bottom: 20px;            { name: 'scaffold-api-gateway', desc: 'API gateway with rate limiting', tags: ['api', 'infrastructure'], category: 'backend' },
-
-            line-height: 1.6;            { name: 'scaffold-auth-oidc', desc: 'OpenID Connect auth server', tags: ['auth', 'api'], category: 'backend' },
-
-        }            { name: 'scaffold-docker-compose-fullstack', desc: 'Full-stack Docker setup', tags: ['devops', 'docker', 'priority'], category: 'devops' },
-
-            { name: 'scaffold-k8s-helm', desc: 'Kubernetes Helm charts', tags: ['devops', 'kubernetes'], category: 'devops' },
-
-        .scaffold-tags {            { name: 'scaffold-ci-cd-pipeline', desc: 'Complete CI/CD pipeline', tags: ['devops', 'ci-cd'], category: 'devops' },
-
-            display: flex;            { name: 'scaffold-observability', desc: 'Monitoring & observability', tags: ['devops', 'monitoring'], category: 'devops' },
-
-            gap: 8px;            { name: 'scaffold-elt-pipeline', desc: 'Data ELT pipeline', tags: ['data', 'pipeline'], category: 'devops' },
-
-            flex-wrap: wrap;            { name: 'scaffold-multi-region-db', desc: 'Multi-region database setup', tags: ['database', 'infrastructure'], category: 'devops' },
-
-        }            { name: 'scaffold-nextjs-ecommerce', desc: 'Next.js ecommerce platform', tags: ['nextjs', 'ecommerce'], category: 'saas' },
-
-            { name: 'scaffold-remix-saas', desc: 'Remix SaaS starter', tags: ['remix', 'saas'], category: 'saas' },
-
-        .tag {            { name: 'scaffold-crossplatform-shared', desc: 'T3 stack monorepo', tags: ['nextjs', 'monorepo', 'priority'], category: 'saas' },
-
-            padding: 6px 14px;            { name: 'scaffold-flutter-consumer', desc: 'Flutter mobile app', tags: ['mobile', 'flutter'], category: 'mobile' },
-
-            background: linear-gradient(135deg, var(--primary), var(--secondary));            { name: 'scaffold-design-system', desc: 'Design system & components', tags: ['ui', 'design'], category: 'frontend' },
-
-            color: white;            { name: 'scaffold-astro-docs', desc: 'Astro documentation site', tags: ['docs', 'astro'], category: 'frontend' },
-
-            border-radius: 50px;            { name: 'scaffold-svelte-kit-app', desc: 'SvelteKit application', tags: ['svelte', 'frontend'], category: 'frontend' },
-
-            font-size: 0.85rem;            { name: 'scaffold-edge-function', desc: 'Edge function (Cloudflare/Vercel)', tags: ['edge', 'serverless'], category: 'backend' },
-
-            font-weight: 600;            { name: 'scaffold-vercel-edge', desc: 'Vercel Edge Functions', tags: ['edge', 'vercel'], category: 'backend' },
-
-        }            { name: 'scaffold-realtime-chat', desc: 'WebSocket real-time chat', tags: ['realtime', 'websocket'], category: 'backend' },
-
-            { name: 'scaffold-billing-stripe', desc: 'Stripe billing integration', tags: ['stripe', 'payments'], category: 'saas' },
-
-        .tag.priority {            { name: 'scaffold-feature-flags', desc: 'Feature flags system', tags: ['devops', 'flags'], category: 'devops' },
-
-            background: linear-gradient(135deg, #f43f5e, #e11d48);            { name: 'scaffold-testing-framework', desc: 'E2E testing framework', tags: ['testing', 'qa'], category: 'devops' },
-
-        }            { name: 'scaffold-gdpr-compliant', desc: 'GDPR compliance toolkit', tags: ['compliance', 'legal'], category: 'healthcare' },
-
-            { name: 'scaffold-accessibility-first', desc: 'Accessibility-first UI', tags: ['a11y', 'frontend'], category: 'frontend' },
-
-        /* Filter Buttons */            { name: 'scaffold-monorepo', desc: 'Monorepo setup (Turborepo)', tags: ['monorepo', 'infrastructure'], category: 'devops' },
-
-        .filter-buttons {            { name: 'scaffold-server-components', desc: 'React Server Components', tags: ['react', 'nextjs'], category: 'frontend' },
-
-            display: flex;        ];
-
-            gap: 15px;
-
-            justify-content: center;        // Render scaffolds
-
-            flex-wrap: wrap;        function renderScaffolds(filter = null) {
-
-            margin-bottom: 50px;            const container = document.getElementById('scaffold-list');
-
-        }            const filtered = filter ? scaffolds.filter(s => s.category === filter) : scaffolds;
-
-            
-
-        .filter-btn {            container.innerHTML = filtered.map(scaffold => `
-
-            padding: 12px 28px;                <a href="https://github.com/offlabel-scaffolds/${scaffold.name}" 
-
-            background: white;                   class="scaffold-card" 
-
-            border: 2px solid #e2e8f0;                   target="_blank">
-
-            border-radius: 50px;                    <div class="scaffold-name">${scaffold.name}</div>
-
-            cursor: pointer;                    <div class="scaffold-desc">${scaffold.desc}</div>
-
-            font-weight: 600;                    <div class="scaffold-tags">
-
-            transition: all 0.3s ease;                        ${scaffold.tags.map(tag => `
-
-            font-family: 'Inter', sans-serif;                            <span class="tag ${tag === 'priority' ? 'priority' : ''}">${tag}</span>
-
-            font-size: 1rem;                        `).join('')}
-
-        }                    </div>
-
-                </a>
-
-        .filter-btn:hover,            `).join('');
-
-        .filter-btn.active {        }
-
+            padding: 6px 14px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-
-            color: white;        function filterScaffolds(category) {
-
-            border-color: transparent;            renderScaffolds(category);
-
-            transform: translateY(-2px);            document.getElementById('scaffolds').scrollIntoView({ behavior: 'smooth' });
-
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);        }
-
+            color: white;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
 
-        // Initial render
+        .tag.priority {
+            background: linear-gradient(135deg, #f43f5e, #e11d48);
+        }
 
-        /* Footer */        renderScaffolds();
+        .filter-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
 
-        footer {    </script>
+        .filter-btn {
+            padding: 12px 28px;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
 
-            background: var(--dark);</body>
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
 
-            color: white;</html>
-
+        footer {
+            background: var(--dark);
+            color: white;
             padding: 80px 0 40px;
         }
 
@@ -1171,7 +476,7 @@
         .footer-section a {
             color: #94a3b8;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
         .footer-section a:hover {
@@ -1191,21 +496,6 @@
             font-weight: 600;
         }
 
-        .footer-bottom a:hover {
-            text-decoration: underline;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.8rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: var(--dark);
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             .container {
                 padding: 0 20px;
@@ -1215,24 +505,9 @@
                 padding: 15px 20px;
             }
 
-            .mobile-menu-btn {
-                display: block;
-            }
-
             .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
                 flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            }
-
-            .nav-links.active {
-                display: flex;
+                gap: 20px;
             }
 
             .scaffold-grid {
@@ -1242,34 +517,16 @@
             .category-grid {
                 grid-template-columns: 1fr;
             }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        /* Loading Animation */
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-
-        .loading {
-            animation: shimmer 2s infinite linear;
-            background: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
-            background-size: 1000px 100%;
         }
     </style>
 </head>
 <body>
     <div class="animated-bg"></div>
 
-    <!-- Navigation -->
-    <nav id="navbar">
+    <nav>
         <div class="container">
             <div class="logo">Offlabel Scaffolds</div>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-            <ul class="nav-links" id="navLinks">
+            <ul class="nav-links">
                 <li><a href="#categories">Categories</a></li>
                 <li><a href="#scaffolds">Scaffolds</a></li>
                 <li><a href="https://github.com/offlabel-scaffolds" target="_blank">GitHub</a></li>
@@ -1278,44 +535,35 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Offlabel Scaffolds</h1>
-                <p class="tagline">47 production-ready project templates for every major tech stack</p>
-                <p class="subtitle">Because life's too short to rebuild authentication for the 47th time.</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-number">47</span>
-                        <span class="stat-label">Scaffolds</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">12</span>
-                        <span class="stat-label">Categories</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Production Ready</span>
-                    </div>
-                </div>
-
-                <a href="#scaffolds" class="hero-cta">
-                    <span>Explore Scaffolds</span>
-                    <span>→</span>
-                </a>
-            </div>
+            <h1>Offlabel Scaffolds</h1>
+            <p class="tagline">47 production-ready project templates for every major tech stack</p>
+            <p class="subtitle">Because life's too short to rebuild authentication for the 47th time.</p>
             
-            <div class="scroll-indicator">
-                <span style="font-size: 2rem;">↓</span>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">47</span>
+                    <span class="stat-label">Scaffolds</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Categories</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Production Ready</span>
+                </div>
             </div>
+
+            <a href="#scaffolds" class="hero-cta">
+                <span>Explore Scaffolds</span>
+                <span>→</span>
+            </a>
         </div>
     </section>
 
-    <!-- Main Content -->
     <div class="main-content">
-        <!-- Categories Section -->
         <section class="section" id="categories">
             <div class="container">
                 <div class="section-header">
@@ -1386,7 +634,6 @@
             </div>
         </section>
 
-        <!-- Scaffolds Section -->
         <section class="section" id="scaffolds" style="background: #f8fafc;">
             <div class="container">
                 <div class="section-header">
@@ -1408,22 +655,19 @@
                 </div>
 
                 <div class="filter-buttons">
-                    <button class="filter-btn active" onclick="filterScaffolds(null)">All</button>
-                    <button class="filter-btn" onclick="filterScaffolds('priority')">Priority</button>
-                    <button class="filter-btn" onclick="filterScaffolds('saas')">SaaS</button>
-                    <button class="filter-btn" onclick="filterScaffolds('ai')">AI/ML</button>
-                    <button class="filter-btn" onclick="filterScaffolds('web3')">Web3</button>
-                    <button class="filter-btn" onclick="filterScaffolds('mobile')">Mobile</button>
+                    <button class="filter-btn active" onclick="filterScaffolds(null, this)">All</button>
+                    <button class="filter-btn" onclick="filterScaffolds('priority', this)">Priority</button>
+                    <button class="filter-btn" onclick="filterScaffolds('saas', this)">SaaS</button>
+                    <button class="filter-btn" onclick="filterScaffolds('ai', this)">AI/ML</button>
+                    <button class="filter-btn" onclick="filterScaffolds('web3', this)">Web3</button>
+                    <button class="filter-btn" onclick="filterScaffolds('mobile', this)">Mobile</button>
                 </div>
 
-                <div class="scaffold-grid" id="scaffold-list">
-                    <!-- Scaffolds will be loaded here via JavaScript -->
-                </div>
+                <div class="scaffold-grid" id="scaffold-list"></div>
             </div>
         </section>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -1457,7 +701,7 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2025 Augustus Rivers - Offlabel Design. All scaffolds MIT licensed.</p>
-                <p style="margin-top: 15px; font-size: 1rem;">
+                <p style="margin-top: 15px;">
                     Need a <a href="https://convert.offlabel.design" target="_blank">format converter</a>? We built that too.
                 </p>
             </div>
@@ -1465,7 +709,6 @@
     </footer>
 
     <script>
-        // Scaffold data
         const scaffolds = [
             { name: 'scaffold-nextjs-saas', desc: 'Next.js 15 SaaS with Stripe & auth', tags: ['nextjs', 'saas', 'priority'], category: 'saas' },
             { name: 'scaffold-fastapi-backend', desc: 'FastAPI with PostgreSQL & auth', tags: ['python', 'api', 'priority'], category: 'backend' },
@@ -1518,7 +761,6 @@
 
         let currentFilter = null;
 
-        // Render scaffolds
         function renderScaffolds(filter = null) {
             const container = document.getElementById('scaffold-list');
             let filtered = scaffolds;
@@ -1530,34 +772,28 @@
             }
             
             container.innerHTML = filtered.map(scaffold => `
-                <a href="https://github.com/offlabel-scaffolds/${scaffold.name}" 
-                   class="scaffold-card" 
-                   target="_blank">
+                <a href="https://github.com/offlabel-scaffolds/${scaffold.name}" class="scaffold-card" target="_blank">
                     <div class="scaffold-name">${scaffold.name}</div>
                     <div class="scaffold-desc">${scaffold.desc}</div>
                     <div class="scaffold-tags">
-                        ${scaffold.tags.map(tag => `
-                            <span class="tag ${tag === 'priority' ? 'priority' : ''}">${tag}</span>
-                        `).join('')}
+                        ${scaffold.tags.map(tag => `<span class="tag ${tag === 'priority' ? 'priority' : ''}">${tag}</span>`).join('')}
                     </div>
                 </a>
             `).join('');
         }
 
-        function filterScaffolds(category) {
+        function filterScaffolds(category, button) {
             currentFilter = category;
             renderScaffolds(category);
             
-            // Update filter buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            if (event && event.target) {
-                event.target.classList.add('active');
+            if (button) {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
             }
             
-            // Scroll to scaffolds
-            document.getElementById('scaffolds').scrollIntoView({ behavior: 'smooth' });
+            if (category) {
+                document.getElementById('scaffolds').scrollIntoView({ behavior: 'smooth' });
+            }
         }
 
         function searchScaffolds() {
@@ -1579,35 +815,16 @@
             }
             
             container.innerHTML = filtered.map(scaffold => `
-                <a href="https://github.com/offlabel-scaffolds/${scaffold.name}" 
-                   class="scaffold-card" 
-                   target="_blank">
+                <a href="https://github.com/offlabel-scaffolds/${scaffold.name}" class="scaffold-card" target="_blank">
                     <div class="scaffold-name">${scaffold.name}</div>
                     <div class="scaffold-desc">${scaffold.desc}</div>
                     <div class="scaffold-tags">
-                        ${scaffold.tags.map(tag => `
-                            <span class="tag ${tag === 'priority' ? 'priority' : ''}">${tag}</span>
-                        `).join('')}
+                        ${scaffold.tags.map(tag => `<span class="tag ${tag === 'priority' ? 'priority' : ''}">${tag}</span>`).join('')}
                     </div>
                 </a>
             `).join('');
         }
 
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Initial render
         renderScaffolds();
     </script>
 </body>
