@@ -63,12 +63,13 @@
             height: 72px;
         }
 
-        .logo-container {display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:17px;color:#171717;text-decoration:none;cursor:pointer;line-height:1;white-space:nowrap;-webkit-font-smoothing:antialiased;transition:color .25s ease}
-        .logo-container:hover {color:#0a0a0a}
-        .logo-img {height:34px;width:auto;display:block;aspect-ratio:auto;filter:brightness(0) contrast(1.1)}
+    .logo-container {display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:17px;color:#171717;text-decoration:none;cursor:pointer;line-height:1;white-space:nowrap;-webkit-font-smoothing:antialiased;transition:color .25s ease}
+    .logo-container:hover {color:#0a0a0a}
+    /* Ensure the provided SVG logo renders with its internal fill color (no color-transform filters) */
+    .logo-img {height:34px;width:auto;display:block;aspect-ratio:auto;filter:none}
         @media (min-width:900px){.logo-img{height:38px}}
         .logo-text {letter-spacing:.5px}
-        @media (prefers-color-scheme: dark){.logo-container{color:#fafafa}.logo-img{filter:invert(1) brightness(1.15)}}
+    @media (prefers-color-scheme: dark){.logo-container{color:#fafafa}.logo-img{filter:none}}
 
         .nav-links {
             display: flex;
