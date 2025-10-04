@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offlabel Scaffolds - Production-Ready Project Templates</title>
-    <meta name="description" content="47 production-ready project scaffolds for Next.js, React Native, FastAPI, AI/ML, Web3, and more.">
+    <meta name="description" content="68 production-ready project scaffolds for Next.js, React Native, FastAPI, AI/ML, Web3, and more.">
     <meta name="author" content="Augustus Rivers">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,33 +53,12 @@
             height: 72px;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 600;
-            font-size: 16px;
-            color: #171717;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        .logo-container:hover {
-            opacity: 0.7;
-        }
-
-        .logo-o {
-            width: 32px;
-            height: 32px;
-            background: #171717;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 18px;
-            color: white;
-        }
+        .logo-container {display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:17px;color:#171717;text-decoration:none;cursor:pointer;line-height:1;white-space:nowrap;-webkit-font-smoothing:antialiased;transition:color .25s ease}
+        .logo-container:hover {color:#0a0a0a}
+        .logo-img {height:34px;width:auto;display:block;aspect-ratio:auto;filter:brightness(0) contrast(1.1)}
+        @media (min-width:900px){.logo-img{height:38px}}
+        .logo-text {letter-spacing:.5px}
+        @media (prefers-color-scheme: dark){.logo-container{color:#fafafa}.logo-img{filter:invert(1) brightness(1.15)}}
 
         .nav-links {
             display: flex;
@@ -502,10 +481,10 @@
     <!-- Glassmorphism Navigation -->
     <nav>
         <div class="container">
-                    <a href="#" class="logo-container" style="text-decoration: none; color: inherit;">
-            <div class="logo-o">O</div>
-            <span>Offlabel Scaffolds</span>
-        </a>
+            <a href="/" class="logo-container" aria-label="Offlabel Scaffolds Home">
+                <img src="assets/logo.svg" alt="Offlabel Scaffolds Logo" class="logo-img" fetchpriority="high" />
+                <span class="logo-text">Scaffolds</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="https://github.com/offlabel-scaffolds">GitHub</a></li>
                 <li><a href="https://offlabel.design/contact" class="contact-btn">Contact</a></li>
